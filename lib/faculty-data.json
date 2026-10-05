@@ -1,0 +1,1348 @@
+{
+  "sourceUrl": "https://srmrmp.edu.in/academics/artificial-intelligence/faculty/",
+  "retrievedOn": "2026-09-28",
+  "excludedLeadingEntries": 3,
+  "faculty": [
+    {
+      "sourceNumber": 4,
+      "name": "Dr. A. Senthilselvi",
+      "designation": "Professor",
+      "department": "AIML & AI",
+      "qualification": "M.Tech., Ph.D",
+      "email": "senthila3@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/4_T934_SENTHILSELVI.pdf"
+    },
+    {
+      "sourceNumber": 5,
+      "name": "Dr. S. Veena",
+      "designation": "Professor",
+      "department": "IOT & CSBS",
+      "qualification": "M.Tech., Ph.D",
+      "email": "veenas1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/5_TET004-Dr.S.Veena_.pdf"
+    },
+    {
+      "sourceNumber": 6,
+      "name": "Dr.J.Sutha",
+      "designation": "Professor & HOD/CSE",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D.",
+      "email": "suthaj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/6_TET253_Dr.J.Sutha_.pdf"
+    },
+    {
+      "sourceNumber": 7,
+      "name": "Dr.R.Subhashini",
+      "designation": "Professor",
+      "department": "CSE",
+      "qualification": "M. E., Ph. D.,",
+      "email": "subhashr2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/7_TET285-Dr.-Subhashini-R.docx.pdf"
+    },
+    {
+      "sourceNumber": 8,
+      "name": "Dr. N. Sankar Ram",
+      "designation": "Professor & HOD/AIML, AI",
+      "department": "AIML & AI",
+      "qualification": "M. E., Ph. D",
+      "email": "sankarrn@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/8_TET331_Dr.N.Sankar-Ram.pdf"
+    },
+    {
+      "sourceNumber": 9,
+      "name": "Dr. Rama Chaitanya Tanguturi",
+      "designation": "Professor & Vice Principal-Academics",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D.",
+      "email": "ramachat1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/9.-Prof-Chaithanya.docx-2-2.pdf"
+    },
+    {
+      "sourceNumber": 10,
+      "name": "Dr. K. Ramesh",
+      "designation": "Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "rameshk9@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/07/10_Dr.-K-Ramesh.pdf"
+    },
+    {
+      "sourceNumber": 11,
+      "name": "Dr. J. Shiny Duela",
+      "designation": "Associate Professor & HOD/CS, GT",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D.",
+      "email": "shinyduj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/10_Shiny-Duela.pdf"
+    },
+    {
+      "sourceNumber": 12,
+      "name": "Dr.A.Umamageswari",
+      "designation": "Associate Professor & HOD/BDA, CC",
+      "department": "BDA & CC",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "umamagea@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/11_T1069-Dr.A.Umamageswari.pdf"
+    },
+    {
+      "sourceNumber": 13,
+      "name": "Dr.Sathya Priya.S",
+      "designation": "Associate Professor",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D.",
+      "email": "sathyas6@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/101_Ms.-Snekha-Priya-1-1.pdf"
+    },
+    {
+      "sourceNumber": 14,
+      "name": "Dr. M. Azhagiri",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M.E.,Ph.D.",
+      "email": "azhagirm@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/13_T671_AZHAGIRI.docx.pdf"
+    },
+    {
+      "sourceNumber": 15,
+      "name": "Dr. S. S. Subashka Ramesh",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M.E.,Ph.D.",
+      "email": "subashkr@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/14_T731_Dr.S.S.Subashka-Ramesh.pdf"
+    },
+    {
+      "sourceNumber": 16,
+      "name": "Dr.S.Suresh",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "sureshs12@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/15_CSE_Dr.S.SURESH.pdf"
+    },
+    {
+      "sourceNumber": 17,
+      "name": "Dr.J Faritha Banu",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M.E.,Ph.D.",
+      "email": "farithat@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/16_T1101_Dr.J-Faritha-Banu_CSE.pdf"
+    },
+    {
+      "sourceNumber": 18,
+      "name": "Dr.Amirtha lakshmi.T.M",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M. Tech.,Ph.D",
+      "email": "amirthat@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/17_Dr.Amirthalakshmi.T.M-2.pdf"
+    },
+    {
+      "sourceNumber": 19,
+      "name": "Dr.S.Raja Ratna",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "rajarats@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/11_T1069-Dr.A.Umamageswari.pdf"
+    },
+    {
+      "sourceNumber": 20,
+      "name": "Dr. Usha Ruby",
+      "designation": "Associate Professor & HOD/CSBS, IOT",
+      "department": "IOT & CSBS",
+      "qualification": "M.E., Ph.D.",
+      "email": "usharuba@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/19_Dr.A.Usha-Ruby.pdf"
+    },
+    {
+      "sourceNumber": 21,
+      "name": "Dr.J.Jean Justus",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M. Tech., Ph. D.,",
+      "email": "jeanjusj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/20_TET284_Dr.J.Jean-Justus.docx.pdf"
+    },
+    {
+      "sourceNumber": 22,
+      "name": "Dr. S.R.Mugunthan",
+      "designation": "Associate Professor",
+      "department": "BDA & CC",
+      "qualification": "M. E., Ph. D",
+      "email": "mugunthr@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/21_Dr.S.R.Mugunthan.pdf"
+    },
+    {
+      "sourceNumber": 23,
+      "name": "Dr.S.Manohar",
+      "designation": "Associate Professor",
+      "department": "IOT & CSBS",
+      "qualification": "M.E., Ph.D.,",
+      "email": "manohars1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/22_MANOHAR-S-_TET356.pdf"
+    },
+    {
+      "sourceNumber": 24,
+      "name": "Dr.A.Ranjith Kumar",
+      "designation": "Associate Professor",
+      "department": "CSE",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "ranjitha3@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/23_TET369-Dr.A.Ranjith-Kumar.pdf"
+    },
+    {
+      "sourceNumber": 25,
+      "name": "Dr.S.Saravanan",
+      "designation": "Associate Professor",
+      "department": "CS & GT",
+      "qualification": "M. E., Ph. D.",
+      "email": "saravans17@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/24_Dr.Saravanan.S.pdf"
+    },
+    {
+      "sourceNumber": 26,
+      "name": "Dr. D. Rajalakshmi",
+      "designation": "Associate Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E, Ph.D",
+      "email": "rajalakd2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/25_TET389_Dr.D.Rajalakshmi.pdf"
+    },
+    {
+      "sourceNumber": 27,
+      "name": "Dr. M. S. Bennet Praba",
+      "designation": "Assistant Professor (Sl. G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "bennetm@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/26_T012-M.S.Bennet-Praba.pdf"
+    },
+    {
+      "sourceNumber": 28,
+      "name": "Dr. M. S. Antony Vigil",
+      "designation": "Assistant Professor (Sr.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D., PDF.,",
+      "email": "antonym@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/27_T248_Dr.AntonyVigil-2.pdf"
+    },
+    {
+      "sourceNumber": 29,
+      "name": "Dr. R. Angeline",
+      "designation": "Assistant Professor (Sl.G)",
+      "department": "AIML & AI",
+      "qualification": "M.Tech., Ph.D",
+      "email": "angelinr1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/12/28_Dr-R-Angeline-24-11-2025.pdf"
+    },
+    {
+      "sourceNumber": 30,
+      "name": "Dr.Deva Hema D",
+      "designation": "Assistant Professor (Sr.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D.",
+      "email": "devahemd@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/29_T354-Dr.Deva-Hema.pdf"
+    },
+    {
+      "sourceNumber": 31,
+      "name": "Dr. P. Sabitha",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "sabithap@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/30_T490_Dr.P.Sabitha.docx.pdf"
+    },
+    {
+      "sourceNumber": 32,
+      "name": "Dr. E. Saraswathi",
+      "designation": "Assistant Professor (Sr.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D.,",
+      "email": "saraswae@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/31_T563_Saraswathi.docx.pdf"
+    },
+    {
+      "sourceNumber": 33,
+      "name": "Dr. S. Visnu Dharsini",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "visnudhs@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/32_CSE_Dr.S.Visnu-Dharsini.pdf"
+    },
+    {
+      "sourceNumber": 34,
+      "name": "Dr. M. Prabu",
+      "designation": "Assistant Professor (Sr.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "prabum@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/33_T568_Dr.-M.PRABU_.docx.pdf"
+    },
+    {
+      "sourceNumber": 35,
+      "name": "Ms. P. Subashini",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E.",
+      "email": "subashini@srmist.edu.in",
+      "profileUrl": null
+    },
+    {
+      "sourceNumber": 36,
+      "name": "Ms. J. Gowthamy",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "gowthamj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/35_J.GOWTHAMY.pdf"
+    },
+    {
+      "sourceNumber": 37,
+      "name": "Ms. S. Aarthi",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "aarthis1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/36_Ms.S.Aarthi-T656.docx-Google-Docs.pdf"
+    },
+    {
+      "sourceNumber": 38,
+      "name": "Dr. R. Sathya",
+      "designation": "Assistant Professor (Sr.G)",
+      "department": "CSE",
+      "qualification": "M.Tech., Ph.D",
+      "email": "sathyar@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/37_Dr.R.Sathya.pdf"
+    },
+    {
+      "sourceNumber": 39,
+      "name": "Dr. M. S. Minu",
+      "designation": "Assistant Professor (O.G)",
+      "department": "BDA & CC",
+      "qualification": "M.E., Ph.D.",
+      "email": "minus@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/38_T672_Dr.M-S-MINU.docx.pdf"
+    },
+    {
+      "sourceNumber": 40,
+      "name": "Dr. C. Ashwini",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "ashwinic@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/39_Dr_C_Ashwini.docx.pdf"
+    },
+    {
+      "sourceNumber": 41,
+      "name": "Dr. S. Sridevi",
+      "designation": "Assistant Professor (O.G)",
+      "department": "BDA & CC",
+      "qualification": "M.E., (Ph.D)",
+      "email": "sridevis@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/40_T858_sridevi-1.pdf"
+    },
+    {
+      "sourceNumber": 42,
+      "name": "Dr.K.Ramya",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CS & GT",
+      "qualification": "M.Tech., Ph.D",
+      "email": "ramyak2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/41_CS_GT_Dr.-Ramya-T862-1.pdf"
+    },
+    {
+      "sourceNumber": 43,
+      "name": "Mr.R.Kingsly stephen",
+      "designation": "Assistant Professor (Sr.G)",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "kingslyr1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/42_T863_Kingsly.docx-1.pdf"
+    },
+    {
+      "sourceNumber": 44,
+      "name": "Ms.Praveena A",
+      "designation": "Assistant Professor (Sl.G)",
+      "department": "CSE",
+      "qualification": "M.Tech., (Ph.D)",
+      "email": "praveena@srmist.edu.in",
+      "profileUrl": null
+    },
+    {
+      "sourceNumber": 45,
+      "name": "Dr.B.Aarthi",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "aarthib@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/44-Dr.-Aarthi-B.pdf"
+    },
+    {
+      "sourceNumber": 46,
+      "name": "Dr.B.JudyFlavia",
+      "designation": "Assistant Professor (O.G)",
+      "department": "AIML & AI",
+      "qualification": "M.Tech., Ph.D",
+      "email": "judyflab@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/44_JUDY-FLAVIA-B-profile.docx.pdf"
+    },
+    {
+      "sourceNumber": 47,
+      "name": "Ms.Reenie Tanya",
+      "designation": "Assistant Professor (O.G))",
+      "department": "CSE",
+      "qualification": "M.Tech., (Ph.D)",
+      "email": "reenietanya@srmist.edu.in",
+      "profileUrl": null
+    },
+    {
+      "sourceNumber": 48,
+      "name": "Dr. K. Sivasankari",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "sivasank1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/04/47_Sivasankari.K.pdf"
+    },
+    {
+      "sourceNumber": 49,
+      "name": "Ms. P. Jayalakshmi",
+      "designation": "Assistant Professor (O.G)",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "jayalakp@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/48_T916_P.Jayalakshmi.pdf"
+    },
+    {
+      "sourceNumber": 50,
+      "name": "Dr.R.Bhuvaneswari",
+      "designation": "Assistant Professor (Sl.G)",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D.",
+      "email": "bhuvaner3@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/49_T1027-Dr.R.BHUVANESWARI.pdf"
+    },
+    {
+      "sourceNumber": 51,
+      "name": "Dr.V.Gowri",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D.",
+      "email": "gowriv1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/142_TET414_V.Gowri_.pdf"
+    },
+    {
+      "sourceNumber": 52,
+      "name": "Dr. N. Suganthi",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "suganthn@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/51_T1057-Dr.-N.Suganthi.pdf"
+    },
+    {
+      "sourceNumber": 53,
+      "name": "Dr.S.Deepa",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E., Ph.D.",
+      "email": "deepas1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/52_T1062_Dr.S.DEEPA_.pdf"
+    },
+    {
+      "sourceNumber": 54,
+      "name": "Dr.S.Menaka",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "menakas1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/53_Dr.S.Menaka.pdf"
+    },
+    {
+      "sourceNumber": 55,
+      "name": "Mr.A.Thiruneelakandan",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "thirunea@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/54_Thiruneelakandan_Profile.pdf"
+    },
+    {
+      "sourceNumber": 56,
+      "name": "Dr.G.Deena",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D",
+      "email": "deenag@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/55_T1074-Dr.G.Deena_.docx.pdf"
+    },
+    {
+      "sourceNumber": 57,
+      "name": "Dr. S.Sajini",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D",
+      "email": "sajinis@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/04/56_S.Sajini.pdf"
+    },
+    {
+      "sourceNumber": 58,
+      "name": "Dr. C. Shanmuganathan",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D.",
+      "email": "shanmugc1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/57_T1093_Dr.Shanmuganathan.docx.pdf"
+    },
+    {
+      "sourceNumber": 59,
+      "name": "Ms.K.Srilekha",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E",
+      "email": "srilekha@srmist.edu.in",
+      "profileUrl": null
+    },
+    {
+      "sourceNumber": 60,
+      "name": "Dr.W.Ancy Breen",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.Tech., Ph.D",
+      "email": "ancybrew@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/59_T1140_Dr.W.-Ancy-Breen.pdf"
+    },
+    {
+      "sourceNumber": 61,
+      "name": "Mr.M.Sadhasivam",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "sadhasim@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/60-M.Sadhasivam.pdf"
+    },
+    {
+      "sourceNumber": 62,
+      "name": "Mr.A.Vadivelu",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.Tech",
+      "email": "vadivela@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/61_VADIVELU.pdf"
+    },
+    {
+      "sourceNumber": 63,
+      "name": "Mr.S.Ezra Vethamani",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "ezravets@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/62_TET014_Mr_.S.Ezra-Vethamani.docx.pdf"
+    },
+    {
+      "sourceNumber": 64,
+      "name": "Mrs.J.Arthy",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E., (Ph.D)",
+      "email": "arthyj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/63_TET016_J.Arthy_.pdf"
+    },
+    {
+      "sourceNumber": 65,
+      "name": "Dr.A.Manju",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "manjua1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/64_TET019_Dr.A.Manju_.pdf"
+    },
+    {
+      "sourceNumber": 66,
+      "name": "Mrs.T.Archana",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E., (Ph.D)",
+      "email": "archanat@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/65_T.ARCHANA-2025.pdf"
+    },
+    {
+      "sourceNumber": 67,
+      "name": "Dr.M.Mahasree",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "mahasrem@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/66_Dr.M.Mahasree.pdf"
+    },
+    {
+      "sourceNumber": 68,
+      "name": "Dr.S.Rubin Bose",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D",
+      "email": "rubinbos@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/67_TET031_Dr_RUBIN-Profile.pdf"
+    },
+    {
+      "sourceNumber": 69,
+      "name": "Mrs.J.Juslin Sega",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D",
+      "email": "juslinsj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/68_Juslin-sega.pdf.pdf"
+    },
+    {
+      "sourceNumber": 70,
+      "name": "Dr.S.S.Sathya",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D",
+      "email": "sathyas5@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/69_TET040_Dr.S.S.Sathya.docx.pdf"
+    },
+    {
+      "sourceNumber": 71,
+      "name": "Dr.B.Abirami",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., Ph.D",
+      "email": "abiramis3@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/70_Dr.-B.-Abirami.pdf"
+    },
+    {
+      "sourceNumber": 72,
+      "name": "Dr.K.Sujatha",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "sujathak@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/71_Dr.Sujatha-K.pdf"
+    },
+    {
+      "sourceNumber": 73,
+      "name": "Dr.R.Regin",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E.,Ph.D",
+      "email": "reginr@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/72_AIML_Dr.R.Regin_.pdf"
+    },
+    {
+      "sourceNumber": 74,
+      "name": "Mrs.S.Jayabharathi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E.,(Ph.D)",
+      "email": "jayabhas@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/73_S.JAYABHARATHI.pdf"
+    },
+    {
+      "sourceNumber": 75,
+      "name": "Mrs.R.Rajasaranyakumari",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E",
+      "email": "rajasaranya@srmist.edu.in",
+      "profileUrl": null
+    },
+    {
+      "sourceNumber": 76,
+      "name": "Dr. Preethi. D",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.Tech.,Ph.D",
+      "email": "preethid1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/75_Dr.Preethi-D.pdf"
+    },
+    {
+      "sourceNumber": 77,
+      "name": "Dr.G.Gangadevi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.Tech, Ph.D.",
+      "email": "gangadeg@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/76_TET088_Dr.G.Gangadevi.pdf"
+    },
+    {
+      "sourceNumber": 78,
+      "name": "Dr.J.Jospin Jeya",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M. E, Ph. D",
+      "email": "jospinjj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/77_TET090-Dr.Jospin-Jeya.docx.pdf"
+    },
+    {
+      "sourceNumber": 79,
+      "name": "Dr.C.Saravanan",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.Tech, Ph.D.",
+      "email": "saravanc2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/78_TET094_Dr.-C.-Saravanan.docx.pdf"
+    },
+    {
+      "sourceNumber": 80,
+      "name": "Mrs.M.Chitra",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D",
+      "email": "chitram2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/79_TET098_Chitra-M.docx.pdf"
+    },
+    {
+      "sourceNumber": 81,
+      "name": "Mrs.S.Lakshmi",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.E,(Ph.D)",
+      "email": "lakshmis9@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/80_TET108_S.-Lakshmi.docx.pdf"
+    },
+    {
+      "sourceNumber": 82,
+      "name": "Ms.S.Abirami",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E,(Ph.D)",
+      "email": "abiramis5@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/81_TET111_S.-Abirami.docx.pdf"
+    },
+    {
+      "sourceNumber": 83,
+      "name": "Ms.K.Subha",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E,(Ph.D)",
+      "email": "subhak4@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/82_subha-k.docx.pdf"
+    },
+    {
+      "sourceNumber": 84,
+      "name": "Dr. J. Cypto",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E, Ph.D",
+      "email": "cyptoj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/04/83_J.Cypto_.pdf"
+    },
+    {
+      "sourceNumber": 85,
+      "name": "Ms.Meivezhi.G.D",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E,(Ph.D)",
+      "email": "meivezhg@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/84_TET128_G.D.MEIVEZHI.pdf"
+    },
+    {
+      "sourceNumber": 86,
+      "name": "Ms.S.Kamaleswari",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E,(Ph.D)",
+      "email": "kamaless@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/85_TET-129-_S.Kamaleswari.docx.pdf"
+    },
+    {
+      "sourceNumber": 87,
+      "name": "Ms.Kudiyarasu Devi.C",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E,(Ph.D)",
+      "email": "kudiyarc@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/86_TET132-C.Kudiyarasudevi.docx.pdf"
+    },
+    {
+      "sourceNumber": 88,
+      "name": "Dr.Vinoth R",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D",
+      "email": "vinothr2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/87_TET141_Dr.VINOTH_R.pdf"
+    },
+    {
+      "sourceNumber": 89,
+      "name": "Mr.K.Rajesh",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. Tech., (Ph.D)",
+      "email": "rajeshk2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/88_TET144_K.Rajesh.docx.pdf"
+    },
+    {
+      "sourceNumber": 90,
+      "name": "Dr.R.Nagalakshmi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "nagalakr1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/89_TET148_Dr.R.Nagalakshmi.docx.pdf"
+    },
+    {
+      "sourceNumber": 91,
+      "name": "Dr.M.B.Sudhan",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.Tech, Ph.D.",
+      "email": "sudhanm@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/90_TET149-Dr.Sudhan.M.B.docx.pdf"
+    },
+    {
+      "sourceNumber": 92,
+      "name": "Dr.U.Surendar",
+      "designation": "Assistant Professor",
+      "department": "IOT & CSBS",
+      "qualification": "M.E., Ph.D.",
+      "email": "surendau@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/91_TET155_Dr.U.Surendar.pdf"
+    },
+    {
+      "sourceNumber": 93,
+      "name": "Dr.Nithisha.J",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D.",
+      "email": "nithishj@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/92_Dr.Nithisha-J.pdf"
+    },
+    {
+      "sourceNumber": 94,
+      "name": "Dr.B.Deepa",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D.",
+      "email": "deepab@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/93_TET157_Dr.B.DEEPA_.docx.pdf"
+    },
+    {
+      "sourceNumber": 95,
+      "name": "Dr.T.Tamilselvi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D.",
+      "email": "tamilset@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/94_TET168_Dr.T.Tamilselvi.pdf"
+    },
+    {
+      "sourceNumber": 96,
+      "name": "Ms. M Beula Kutti",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E,.(Ph.D)",
+      "email": "beulakum@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/95_M-BEULA.pdf"
+    },
+    {
+      "sourceNumber": 97,
+      "name": "Dr.V.Nivedita",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E.,Ph.D.",
+      "email": "niveditv1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/96_TET174-Dr.V.Nivedita.docx.pdf"
+    },
+    {
+      "sourceNumber": 98,
+      "name": "Mr.A.Madhu",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E.",
+      "email": "madhua@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/97_A.-Madhu-1.pdf"
+    },
+    {
+      "sourceNumber": 99,
+      "name": "Dr.R.Rajesh Kanna",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E.,Ph.D",
+      "email": "rajeshkr1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/98_TET179_RAJESH-KANNA-PROFILE.pdf"
+    },
+    {
+      "sourceNumber": 100,
+      "name": "Mr.B.Hariharan",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.Tech",
+      "email": "hariharb1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/99_Mr.-Hariharan.B-1.pdf"
+    },
+    {
+      "sourceNumber": 101,
+      "name": "Dr. GV. Shrichandran",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "shrichag@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/100_TET216_Dr.-Shrichandran-GV.pdf"
+    },
+    {
+      "sourceNumber": 102,
+      "name": "Mrs.M.Sneha Priya",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M. E., (Ph.D)",
+      "email": "snehaprm1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/101_Ms.-Snekha-Priya-1-2.pdf"
+    },
+    {
+      "sourceNumber": 103,
+      "name": "Ms.Srinarayani.K",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M. E., (Ph.D)",
+      "email": "srinarak@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/102_TET220_SRINARAYANI.K.pdf"
+    },
+    {
+      "sourceNumber": 104,
+      "name": "Dr.A.Sandhya",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.Tech., Ph.D",
+      "email": "sandhyaa@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/103_TET224_Dr.A.Sandhya.docx.pdf"
+    },
+    {
+      "sourceNumber": 105,
+      "name": "Ms.S.Vaishnavii",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., (Ph.D)",
+      "email": "vaishnas1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/TET236-_S.VAISHNAVII.pdf"
+    },
+    {
+      "sourceNumber": 106,
+      "name": "Dr.G.Indhumathi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E.,Ph.D",
+      "email": "indumatg2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/04/105_Dr.G.Indumathi.pdf"
+    },
+    {
+      "sourceNumber": 107,
+      "name": "Ms.R.Swathi",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M. E., (Ph.D)",
+      "email": "swathir2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/106_Ms.-R.Swathi.pdf"
+    },
+    {
+      "sourceNumber": 108,
+      "name": "Ms.V.Mahavaishnavi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., (Ph.D)",
+      "email": "mahavaiv@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/107_Ms.-V.-Mahavaishnavi.pdf"
+    },
+    {
+      "sourceNumber": 109,
+      "name": "Dr.R.M.R.Shamija Sherryl",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D.",
+      "email": "shamijar@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/108_TET-254_Dr.R.M.R.SHAMIJA-SHERRYL.docx.pdf"
+    },
+    {
+      "sourceNumber": 110,
+      "name": "Mr.Sachin Aditiya.B",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. Tech.,",
+      "email": "sachinab@srmist.edu",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/109_Sachin_Aditiya.B.docx-1.pdf"
+    },
+    {
+      "sourceNumber": 111,
+      "name": "Dr. Adlene Ebenezer. P",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., Ph. D.,",
+      "email": "adleneep2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/110_TET258_Adlene-Ebenezer-P.docx.pdf"
+    },
+    {
+      "sourceNumber": 112,
+      "name": "Mrs. Malathi. P",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., (Ph. D).,",
+      "email": "malathip@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/111_Ms-Malathi-P.pdf"
+    },
+    {
+      "sourceNumber": 113,
+      "name": "Dr. Revathy. S",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M. E., Ph. D.,",
+      "email": "revathys2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/112_TET269_Dr-Revathy.pdf"
+    },
+    {
+      "sourceNumber": 114,
+      "name": "Dr. R. Sujeetha",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., Ph. D",
+      "email": "sujeethr2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/113_TET272_Dr-R-SUJEETHA_PROFILE.docx.pdf"
+    },
+    {
+      "sourceNumber": 115,
+      "name": "Dr. C. S. Sasireka",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., Ph. D.,",
+      "email": "sasirekc@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/114_SASIREKA.C.S_FAC-PROFILE.docx.pdf"
+    },
+    {
+      "sourceNumber": 116,
+      "name": "Mrs. Vaishnavi. R",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M. E., (Ph.D)",
+      "email": "vaishnar5@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/115_TET287_Vaishnavi-R_2025.docx.pdf"
+    },
+    {
+      "sourceNumber": 117,
+      "name": "Ms. Nikitha M Kurian",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M. Tech., (Ph.D)",
+      "email": "nikithak@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/116_Nikitha_.pdf"
+    },
+    {
+      "sourceNumber": 118,
+      "name": "Dr. Geetha T V",
+      "designation": "Assistant Professor",
+      "department": "IOT & CSBS",
+      "qualification": "M. E., Ph. D.,",
+      "email": "geethat@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/117_TET298_Dr.-Geetha-T-V-Profile.docx.pdf"
+    },
+    {
+      "sourceNumber": 119,
+      "name": "Dr. Sahaya Sakila. V",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., Ph. D.,",
+      "email": "sahayasv2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/118_TET295_Dr-SAHAYA-SAKILA-V-Profile.docx.pdf"
+    },
+    {
+      "sourceNumber": 120,
+      "name": "Mr. C. Santhosh Kumar",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "santhosc2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/119_TET303_C-SANTHOSH-KUMAR-PROFILE.docx.pdf"
+    },
+    {
+      "sourceNumber": 121,
+      "name": "Mrs. Geetha C",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. Tech.,",
+      "email": "geethac@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/120_TET304-_Geetha-C.docx.pdf"
+    },
+    {
+      "sourceNumber": 122,
+      "name": "Ms. S.Nalini Poornima",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.Tech., (Ph.D)",
+      "email": "nalinips@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/121_TET310_NALINI-POORNIMA.docx.pdf"
+    },
+    {
+      "sourceNumber": 123,
+      "name": "Dr. S. Nancy Lima Christy",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "nancylis@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/04/122_NANCY.pdf"
+    },
+    {
+      "sourceNumber": 124,
+      "name": "Ms. M. Devika",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "devikam@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/123_TET312_M.-DEVIKA.docx.pdf"
+    },
+    {
+      "sourceNumber": 125,
+      "name": "Ms. Sowmiya Sree C",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M. Tech.,(Ph.D)",
+      "email": "sowmiyac@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/124_TET313_Sowmiya-Sree-C.docx.pdf"
+    },
+    {
+      "sourceNumber": 126,
+      "name": "Ms.Ramaprabha M",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D)",
+      "email": "ramapram@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/125_TET315_Ramaprabha_profile.pdf"
+    },
+    {
+      "sourceNumber": 127,
+      "name": "Ms. Harini B",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D.)",
+      "email": "harinib@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/126_TET-316-B.Harini.docx.pdf"
+    },
+    {
+      "sourceNumber": 128,
+      "name": "Ms. Chandrakala S",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., (Ph.D.)",
+      "email": "chandras13@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/127_TET-317-S.CHANDRAKALA.docx.pdf"
+    },
+    {
+      "sourceNumber": 129,
+      "name": "Dr. R. Bharathi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M. E., Ph. D",
+      "email": "bharathr9@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/128_TET332_DR.R.BHARATHI.pdf"
+    },
+    {
+      "sourceNumber": 130,
+      "name": "Dr.T K S Rathish Babu",
+      "designation": "Assistant Professor",
+      "department": "IOT & CSBS",
+      "qualification": "M. E., Ph. D",
+      "email": "rathisht@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/129_TET334-DR.T.K.S.RATHISH-BABU-1.pdf"
+    },
+    {
+      "sourceNumber": 131,
+      "name": "Dr. L. Madhuridevi",
+      "designation": "Assistant Professor",
+      "department": "IOT & CSBS",
+      "qualification": "M.E., Ph.D",
+      "email": "madhuril@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/130_TET345-Dr.L.Madhuridevi.docx.pdf"
+    },
+    {
+      "sourceNumber": 132,
+      "name": "Dr. R.Arunkumar",
+      "designation": "Assistant Professor",
+      "department": "IOT & CSBS",
+      "qualification": "M. Tech., Ph.D.",
+      "email": "arunkumr2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/131_TET348-Dr.-R.-Arunkumar.pdf"
+    },
+    {
+      "sourceNumber": 133,
+      "name": "Dr. P. Rajeswari",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E., Ph.D.",
+      "email": "rajeswap3@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/132_TET358_Dr.P.Rajeswari.pdf"
+    },
+    {
+      "sourceNumber": 134,
+      "name": "Dr. Snofy D Dunston",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D.",
+      "email": "snofydd@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/12/133_TET363_Snofy-Dunston.docx.pdf"
+    },
+    {
+      "sourceNumber": 135,
+      "name": "Dr. Saravanapriya Manoharan",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D.",
+      "email": "saravanm16@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/134_TET-366_Dr.-Saravanapriya-Manoharan.docx.pdf"
+    },
+    {
+      "sourceNumber": 136,
+      "name": "Dr. Mohan. M",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "mohanm6@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/135_TET370_Dr-Mohan-M-_SRM.pdf"
+    },
+    {
+      "sourceNumber": 137,
+      "name": "Mrs. R. Lakshmi",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.Tech., (Ph.D)",
+      "email": "lakshmir14@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/136_TET362_R.Lakshmi.docx.pdf"
+    },
+    {
+      "sourceNumber": 138,
+      "name": "Dr. Mageshkumar .N",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.Tech., Ph.D",
+      "email": "mageshnk@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/137_TET390_Dr.Mageshkumar-.-N.pdf"
+    },
+    {
+      "sourceNumber": 139,
+      "name": "Dr. G. Sumathi",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "sumathig1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/08/139_TET393_G.-Sumathi.pdf"
+    },
+    {
+      "sourceNumber": 140,
+      "name": "Mrs. R. Shanmuga Priya",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.E., (Ph.D)",
+      "email": "shanmugr2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/139_TET407_R.-Shanmuga-Priya.docx.pdf"
+    },
+    {
+      "sourceNumber": 141,
+      "name": "Dr. R. Poorni",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D",
+      "email": "poornir@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/140_TET406_Poorni.docx.pdf"
+    },
+    {
+      "sourceNumber": 142,
+      "name": "Mrs. S. Daphne",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.Tech., (Ph.D)",
+      "email": "daphnes@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/141_TET408_S_Daphne.pdf"
+    },
+    {
+      "sourceNumber": 143,
+      "name": "Dr. V. Gowri",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E., Ph.D.",
+      "email": "gowriv2@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/08/143_TET414_V.Gowri_.pdf"
+    },
+    {
+      "sourceNumber": 144,
+      "name": "Dr.Shaamili Varsa.G.V",
+      "designation": "Assistant Professor",
+      "department": "CS & GT",
+      "qualification": "M.E., Ph.D",
+      "email": "shaamilg1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/143_TET418_Shaamili-Varsa.pdf"
+    },
+    {
+      "sourceNumber": 145,
+      "name": "Dr. Jananee. V",
+      "designation": "Assistant Professor",
+      "department": "AIML & AI",
+      "qualification": "M.E., Ph.D",
+      "email": "jananeev@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/04/144_Dr.Jananee.pdf"
+    },
+    {
+      "sourceNumber": 146,
+      "name": "Dr. P.C. Sarah Prithvika",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E., Ph. D",
+      "email": "pcsarahp@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/08/146_TET427_P.C.-Sarah-Prithvika.pdf"
+    },
+    {
+      "sourceNumber": 147,
+      "name": "Dr. Muneeswaran. V",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "muneeswv@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/07/147_Dr.Muneeshwaran.pdf"
+    },
+    {
+      "sourceNumber": 148,
+      "name": "Dr. Deepika",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.Tech., Ph.D",
+      "email": "deepikag1@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/07/148_Dr.-Deepika.pdf"
+    },
+    {
+      "sourceNumber": 149,
+      "name": "Dr. Banupriya. N",
+      "designation": "Assistant Professor",
+      "department": "CSE",
+      "qualification": "M.E., Ph.D",
+      "email": "banuprin@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/07/149_Dr.-Banupriya.N.pdf"
+    },
+    {
+      "sourceNumber": 150,
+      "name": "Mr. PM Suresh",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.Tech.,(Ph.D)",
+      "email": "sureshp7@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/08/150_TET468_PM-Suresh.pdf"
+    },
+    {
+      "sourceNumber": 151,
+      "name": "Dr. M. Jeevitha",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.E., Ph.D.",
+      "email": "jeevithm5@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/08/151_TET476_Jeevitha.pdf"
+    },
+    {
+      "sourceNumber": 152,
+      "name": "Dr. N. Kannammal",
+      "designation": "Assistant Professor",
+      "department": "BDA & CC",
+      "qualification": "M.Tech., Ph.D.",
+      "email": "kannammn@srmist.edu.in",
+      "profileUrl": "https://srmrmp.edu.in/wp-content/uploads/2026/08/152_TET496-Dr.N.kannammal.pdf"
+    }
+  ]
+}
