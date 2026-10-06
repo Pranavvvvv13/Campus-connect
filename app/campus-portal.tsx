@@ -1,18 +1,21 @@
 "use client";
 
-import { Award, ArrowUpRight, Bookmark, Settings, RefreshCw, MapPin, Wifi, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, ExternalLink, GraduationCap, IdCard, KeyRound, LayoutDashboard, LockKeyhole, LogOut, Mail, Microscope, Moon, Search, ShieldCheck, Sparkles, Sun, Trophy, UsersRound } from "lucide-react";
+import { Award, ArrowUpRight, Bookmark, Settings, RefreshCw, MapPin, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, ExternalLink, GraduationCap, IdCard, KeyRound, LayoutDashboard, LogOut, Mail, Microscope, Moon, Search, ShieldCheck, Sparkles, Sun, Trophy, UsersRound } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { eventDate, type HackathonFeed } from "@/lib/hackathons";
 import facultyDirectory from "@/lib/faculty-data.json";
 import Portfolio from "@/components/portfolio";
+import AdminDashboard from "@/components/admin-dashboard";
+import StudentDirectory from "@/components/student-directory";
 import { demoDirectory, type Role, type DemoSession } from "@/lib/demo-accounts";
 import { workspaceRequest } from "@/lib/workspace-client";
 import { useBookmarks } from "@/hooks/use-bookmarks";
-import { BookmarkActions, DeadlineReminders } from "@/components/hackathon-saving";
+import HackathonCard from "@/components/hackathon-card";
+import { DeadlineReminders } from "@/components/hackathon-saving";
 
 import { sortHackathons } from "@/lib/workspace-model";
 
-type Section = "dashboard" | "hackathons" | "saved" | "faculty" | "clubs" | "settings" | "admin";
+type Section = "portfolio" | "dashboard" | "hackathons" | "saved" | "faculty" | "students" | "clubs" | "settings" | "admin";
 
 
 
@@ -31,12 +34,14 @@ const clubData = [
 const facultyData = facultyDirectory.faculty;
 
 const navItems: { id: Section; label: string; icon: typeof LayoutDashboard; roles?: Role[] }[] = [
+  { id: "portfolio", label: "My portfolio", icon: IdCard },
   { id: "dashboard", label: "Overview", icon: LayoutDashboard },
   { id: "hackathons", label: "Hackathons", icon: Trophy },
-  { id: "saved", label: "Saved hackathons", icon: Bookmark },
+  { id: "saved", label: "Saved hackathons", icon: Bookmark, roles: ["Student", "Admin"] },
   { id: "faculty", label: "Faculty research", icon: Microscope },
+  { id: "students", label: "Student portfolios", icon: GraduationCap, roles: ["Faculty", "Admin"] },
   { id: "clubs", label: "Clubs & events", icon: UsersRound },
-  { id: "admin", label: "Admin console", icon: ShieldCheck, roles: ["Admin"] },
+  { id: "admin", label: "Admin dashboard", icon: ShieldCheck, roles: ["Admin"] },
 ];
 
 function Metric({ icon: Icon, label, value, note }: { icon: typeof Award; label: string; value: string; note: string }) {
@@ -135,7 +140,7 @@ function useHackathonFeed() {
 }
 
 function Portal({ viewer, assignedRole, onSignOut, theme, toggleTheme }: { viewer: { name: string; email: string; authenticated: boolean }; assignedRole: Role; onSignOut: () => void; theme: "light" | "dark"; toggleTheme: () => void }) {
-  const [section, setSection] = useState<Section>("dashboard");
+  const [section, setSection] = useState<Section>(assignedRole === "Admin" ? "admin" : "dashboard");
   const role = assignedRole;
 
   const [query, setQuery] = useState("");
@@ -150,42 +155,63 @@ function Portal({ viewer, assignedRole, onSignOut, theme, toggleTheme }: { viewe
     const categories: Record<string, RegExp> = { Technical: /technical|technology|development|web3|ai|data|programming|security|testing/i, Creative: /creative|design|content|editing/i, Media: /media|pr|marketing/i, Management: /management|operations/i, Security: /security|testing/i };
     return clubData.filter(club => (clubFilter === "All" || club.domains.some(domain => categories[clubFilter]?.test(domain))) && [club.name, ...club.domains].join(" ").toLowerCase().includes(query.trim().toLowerCase()));
   }, [clubFilter, query]);
-  const go = (id: Section) => { setSection(id); setQuery(""); contentRef.current?.scrollTo({top:0}); };
+  const go = (id: Section) => { setSection(role === "Admin" && id !== "settings" ? "admin" : id); setQuery(""); contentRef.current?.scrollTo({top:0}); };
   const initials = viewer.name.split(" ").map(part => part[0]).slice(0, 2).join("");
-  const navigation = navItems.filter(item => !item.roles || item.roles.includes(role));
+  const navigation = navItems.filter(item => role === "Admin" ? item.id === "admin" : !item.roles || item.roles.includes(role));
   return <div className="spatial-scene">
     <div className="ambient-shape ambient-one" aria-hidden="true" /><div className="ambient-shape ambient-two" aria-hidden="true" />
-    <nav className="spatial-rail" aria-label="Quick navigation">
-      <span className="rail-brand"><GraduationCap size={23}/></span>
+    {role !== "Admin" && <nav className="spatial-rail" aria-label="Quick navigation">
+
       {navigation.map(({id,label,icon:Icon}) => <button key={id} className={`rail-button ${section === id ? "active" : ""}`} onClick={()=>go(id)} aria-label={label} aria-current={section === id ? "page" : undefined} title={label}><Icon size={19}/></button>)}
       <span className="rail-divider"/><button className="rail-button" onClick={()=>go("settings")} aria-label="User settings" title="User settings"><Settings size={19}/></button>
-    </nav>
+    </nav>}
     <div className="portal-shell">
       <main className="main-area">
         <header className="topbar"><div className="window-controls" aria-hidden="true"><i /><i /><i /></div><span className="portal-wordmark"><GraduationCap size={21}/><strong>CampusConnect</strong></span><span className="breadcrumb">Workspace <ChevronRight size={12} /> {section === "settings" ? "User settings" : navigation.find(item => item.id === section)?.label}</span><div className="top-actions"><ThemeToggle theme={theme} toggleTheme={toggleTheme} /><button className="avatar small avatar-button" onClick={() => go("settings")} aria-label="Open user settings">{initials}</button></div></header>
         <div className="page-content" ref={contentRef}>
-          <DeadlineReminders saved={currentSaved} now={now} onOpen={()=>go("saved")}/>
-          {section !== "settings" && <label className="global-search"><Search size={17} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder={section === "hackathons" ? "Search hackathons, cities and organisers" : "Search people, clubs and opportunities"} aria-label="Search portal" /><kbd>⌕</kbd></label>}
-          {section === "dashboard" && <Dashboard role={role} name={viewer.name} go={go} live={live} query={query} />}
-          {(section === "hackathons" || section === "saved") && <Hackathons key={section} live={live} query={query} bookmarks={bookmarks} now={now} savedOnly={section === "saved"} />}
+          {role === "Student" && <DeadlineReminders saved={currentSaved} now={now} onOpen={()=>go("saved")}/>}
+          {section !== "settings" && section !== "portfolio" && <label className="global-search"><Search size={17} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder={section === "admin" ? "Search accounts or audit activity" : section === "students" || (section === "dashboard" && (role === "Faculty" || role === "Admin")) ? "Search students by name, ID, skills or projects" : section === "hackathons" ? "Search hackathons, cities and organisers" : section === "dashboard" ? "Search faculty, departments, clubs and hackathons" : "Search people, clubs and opportunities"} aria-label="Search portal" /><kbd>⌕</kbd></label>}
+          {section === "dashboard" && !query.trim() && <Dashboard role={role} name={viewer.name} go={go} live={live} query={query} />}
+          {section === "dashboard" && Boolean(query.trim()) && role === "Student" && <StudentSearch query={query} live={live} onClear={()=>setQuery("")} />}
+          {(section === "hackathons" || section === "saved") && <Hackathons key={section} live={live} query={query} bookmarks={bookmarks} now={now} savedOnly={section === "saved"} allowSaving={role !== "Faculty"} />}
+          {section === "dashboard" && Boolean(query.trim()) && (role === "Faculty" || role === "Admin") && <StudentDirectory query={query} onClearSearch={()=>setQuery("")} />}
           {section === "clubs" && <Clubs clubs={filteredClubs} filter={clubFilter} setFilter={setClubFilter} />}
           {section === "faculty" && <Faculty query={query} />}
+          {section === "students" && (role === "Faculty" || role === "Admin") && <StudentDirectory query={query} onClearSearch={()=>setQuery("")} />}
+          {section === "portfolio" && <Portfolio viewer={viewer} role={role} />}
+          {section === "settings" && role === "Admin" && <button className="secondary-button" onClick={()=>go("admin")}><ChevronLeft size={16}/> Back to admin dashboard</button>}
           {section === "settings" && <UserSettings viewer={viewer} role={role} theme={theme} toggleTheme={toggleTheme} onSignOut={onSignOut} />}
-          {section === "admin" && <Admin />}
+          {section === "admin" && role === "Admin" && <AdminDashboard query={query} />}
         </div>
       </main>
     </div>
-    <div className="spatial-dock" aria-label="Workspace shortcuts"><span className="dock-symbol"><GraduationCap size={19}/></span><span><strong>SRM Ramapuram</strong><small>{role} workspace</small></span><span className="dock-divider"/><button onClick={()=>go("hackathons")}><Trophy size={16}/> Explore</button><button onClick={()=>go("saved")}><Bookmark size={16}/> Saved</button><button onClick={()=>go("settings")} aria-label="Open user settings"><Settings size={17}/></button></div>
+    {role !== "Admin" && <div className="spatial-dock" aria-label="Workspace shortcuts"><span className="dock-symbol"><GraduationCap size={19}/></span><span><strong>SRM Ramapuram</strong><small>{role} workspace</small></span><span className="dock-divider"/><button onClick={()=>go("hackathons")}><Trophy size={16}/> Explore</button>{role !== "Faculty" && <button onClick={()=>go("saved")}><Bookmark size={16}/> Saved</button>}<button onClick={()=>go("settings")} aria-label="Open user settings"><Settings size={17}/></button></div>}
   </div>;
 }
 
 function PageHeading({ eyebrow, title, copy, action }: { eyebrow: string; title: string; copy: string; action?: React.ReactNode }) { return <div className="page-heading"><div><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{copy}</p></div>{action}</div>; }
 
+function StudentSearch({query,live,onClear}:{query:string;live:ReturnType<typeof useHackathonFeed>;onClear:()=>void}) {
+  const [category,setCategory]=useState("All");
+  const terms=query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const matches=(values:string[])=>terms.every(term=>values.join(" ").toLowerCase().includes(term));
+  const faculty=facultyData.filter(person=>matches([person.name,person.department,person.designation,person.qualification,person.email]));
+  const clubs=clubData.filter(club=>matches([club.name,...club.domains,club.president,club.vicePresident,club.secretary]));
+  const events=(live.feed?.events??[]).filter(event=>matches([event.title,event.host,event.location??"",...event.tags]));
+  const count=(category==="All"||category==="Faculty"?faculty.length:0)+(category==="All"||category==="Clubs"?clubs.length:0)+(category==="All"||category==="Hackathons"?events.length:0);
+  return <><PageHeading eyebrow="Campus search" title="Search results" copy={`Find faculty, campus clubs and live opportunities matching “${query.trim()}”.`} action={<button className="secondary-button" onClick={onClear}>Clear search</button>}/><div className="filter-row" aria-label="Search categories">{["All","Faculty","Clubs","Hackathons"].map(value=><button key={value} className={category===value?"filter-chip active":"filter-chip"} aria-pressed={category===value} onClick={()=>setCategory(value)}>{value}</button>)}</div><p role="status">{count} matching results</p>
+    {(category==="All"||category==="Faculty")&&faculty.length>0&&<section className="student-search-section"><h2>Faculty · {faculty.length}</h2><div className="student-grid">{faculty.map(person=><article className="panel student-card" key={person.email}><span className="student-badge">Faculty · SRM directory</span><h3>{person.name}</h3><p>{person.designation}</p><dl className="faculty-details"><div><dt>Department</dt><dd>{person.department}</dd></div><div><dt>Qualification</dt><dd>{person.qualification}</dd></div></dl><a className="faculty-email" href={`mailto:${person.email}`}><Mail size={14}/>{person.email}</a>{person.profileUrl?<a className="secondary-button full" href={person.profileUrl} target="_blank" rel="noreferrer">View faculty profile <ExternalLink size={15}/></a>:<p>Profile link not provided.</p>}</article>)}</div></section>}
+    {(category==="All"||category==="Clubs")&&clubs.length>0&&<section className="student-search-section"><h2>Clubs · {clubs.length}</h2><div className="student-grid">{clubs.map(club=><article className="panel student-card" key={club.name}><span className="student-badge">Campus club</span><h3>{club.name}</h3><div className="skill-list">{club.domains.map(domain=><span key={domain}>{domain}</span>)}</div><p>President: {club.president}</p><p>Vice president: {club.vicePresident}</p><p>Secretary: {club.secretary}</p></article>)}</div></section>}
+    {(category==="All"||category==="Hackathons")&&<section className="student-search-section">{events.length>0&&<><h2>Hackathons · {events.length}</h2><div className="compact-list">{events.map(event=><a className="compact-event" key={event.id} href={event.href} target="_blank" rel="noreferrer"><span className="event-tile"><Trophy size={22}/></span><span><strong>{event.title}</strong><small>{event.source} · {event.mode} · {event.location||"See event page"} · Apply by {eventDate(event.deadline)}</small></span><ArrowUpRight size={17}/></a>)}</div></>}{live.loading&&!live.feed&&<p role="status">Searching live hackathons…</p>}{live.error&&<p className="provider-notice" role="alert">{live.error}<button className="text-button" onClick={()=>void live.refresh()}>Retry hackathon search</button></p>}</section>}
+    {!count&&<div className="empty-clubs"><Search size={24}/><strong>No matches in this view</strong><span>Try a faculty name, department, club or skill. You can also change the search category.</span></div>}
+  </>;
+}
+
 function Dashboard({ role, name, go, live, query }: { role: Role; name: string; go: (s: Section) => void; live: ReturnType<typeof useHackathonFeed>; query: string }) {
   const events = (live.feed?.events ?? []).filter(event => [event.title, event.host, ...event.tags].join(" ").toLowerCase().includes(query.toLowerCase())).slice(0, 3);
   return <div className="spatial-dashboard">
     <div className="section-kicker"><span className="live-dot" /> Your campus, in focus <span>Make room for what’s next.</span></div>
-    <section className="welcome-panel"><div><span className="welcome-badge"><Sparkles size={14} /> A world of possibilities</span><h1>Hello, {name.split(" ")[0]}.<br /><span>Find your next spark.</span></h1><p>Ideas worth building. People worth meeting.<br />Your next chapter starts right here.</p><div className="welcome-actions"><button className="primary-button" onClick={() => go("hackathons")}>Explore opportunities <ArrowUpRight size={16} /></button><button className="text-button" onClick={() => go("clubs")}>Find your community <ChevronRight size={16} /></button></div></div><div className="hero-orbits" aria-hidden="true"><div className="orbit-ring ring-one" /><div className="orbit-ring ring-two" /><div className="orbit-ring ring-three" /><span className="orbit-core"><GraduationCap size={43} strokeWidth={1.2} /></span><span className="orbit-node node-one"><Trophy size={21} /></span><span className="orbit-node node-two"><Microscope size={20} /></span><span className="orbit-node node-three"><UsersRound size={21} /></span></div></section>
+    <section className="welcome-panel"><div><span className="welcome-badge"><Sparkles size={14} /> A world of possibilities</span><h1>Hello, {name.split(" ")[0]}.<br /><span>Find your next spark.</span></h1><p>Ideas worth building. People worth meeting.<br />Your next chapter starts right here.</p><div className="welcome-actions"><button className="primary-button" onClick={() => go("hackathons")}>Explore opportunities <ArrowUpRight size={16} /></button><button className="text-button" onClick={() => go(role === "Student" ? "clubs" : "students")}>{role === "Student" ? "Find your community" : "Browse student portfolios"} <ChevronRight size={16} /></button></div></div><div className="hero-orbits" aria-hidden="true"><div className="orbit-ring ring-one" /><div className="orbit-ring ring-two" /><div className="orbit-ring ring-three" /><span className="orbit-core"><GraduationCap size={43} strokeWidth={1.2} /></span><span className="orbit-node node-one"><Trophy size={21} /></span><span className="orbit-node node-two"><Microscope size={20} /></span><span className="orbit-node node-three"><UsersRound size={21} /></span></div></section>
     <section className="metric-grid"><Metric icon={Trophy} label="Open opportunities" value={live.feed ? String(live.feed.events.length).padStart(2, "0") : "—"} note="From live event listings" /><Metric icon={Microscope} label="Faculty network" value={String(facultyData.length)} note="From the SRM directory" /><Metric icon={UsersRound} label="Campus communities" value="09" note="Find where you belong" /></section>
     <section className="panel opportunity-panel"><div className="panel-title"><div><p className="eyebrow">Go build something</p><h2>On your radar</h2></div><button className="text-button" onClick={() => go("hackathons")}>All opportunities <ArrowUpRight size={16} /></button></div><div className="compact-list">{events.map(event => <a key={event.id} href={event.href} target="_blank" rel="noreferrer" className="compact-event"><span className={"event-tile " + event.source.toLowerCase()}><Trophy size={24} /></span><span><strong>{event.title}</strong><small>{event.source} · {event.mode} · {event.deadline ? "Apply by " + eventDate(event.deadline) : "Starts " + eventDate(event.startsAt)}</small></span><ArrowUpRight size={18} /></a>)}{live.loading && !live.feed && <p className="feed-message">Finding current hackathons…</p>}{live.error && <p className="feed-message" role="alert">{live.error}</p>}{live.feed && !events.length && <p className="feed-message">No open opportunities match your search.</p>}</div></section>
     <div className="explore-grid"><button className="explore-card research" onClick={() => go("faculty")}><span><Microscope size={26} /></span><div><small>Knowledge, shared</small><h2>Meet your mentors.</h2><p>Explore the faculty research network.</p></div><ArrowUpRight size={21} /></button><button className="explore-card community" onClick={() => go("clubs")}><span><UsersRound size={26} /></span><div><small>Better, together</small><h2>Find your people.</h2><p>Nine communities. Endless possibilities.</p></div><ArrowUpRight size={21} /></button></div>
@@ -193,7 +219,7 @@ function Dashboard({ role, name, go, live, query }: { role: Role; name: string; 
   </div>;
 }
 
-function Hackathons({ live, query, bookmarks, savedOnly, now }: { live: ReturnType<typeof useHackathonFeed>; query: string; bookmarks:ReturnType<typeof useBookmarks>; savedOnly:boolean; now:number }) {
+function Hackathons({ live, query, bookmarks, savedOnly, now, allowSaving }: { live: ReturnType<typeof useHackathonFeed>; query: string; bookmarks:ReturnType<typeof useBookmarks>; savedOnly:boolean; now:number; allowSaving:boolean }) {
   const [filter, setFilter] = useState("All events");
   const [location, setLocation] = useState("all");
   const [sort,setSort]=useState("deadline");
@@ -203,22 +229,22 @@ function Hackathons({ live, query, bookmarks, savedOnly, now }: { live: ReturnTy
     (location === "all" || (location === "online" ? event.mode === "Online" : location === "unknown" ? event.mode !== "Online" && !event.location : event.mode !== "Online" && event.location?.trim() === location)) &&
     [event.title, event.host, event.location ?? "", ...event.tags].join(" ").toLowerCase().includes(query.trim().toLowerCase())),sort);
   return <><PageHeading eyebrow="Build your next chapter" title={savedOnly?"Saved hackathons":"Hackathons"} copy={savedOnly?"Your shortlist, saved to your account. Set reminders and keep track of registration deadlines.":"Fresh opportunities for curious minds. Find a challenge and make something that matters."} action={<button className="secondary-button" disabled={live.loading} onClick={() => {void live.refresh();void bookmarks.refresh();}}><RefreshCw size={16} className={live.loading ? "spinning" : ""} /> {live.loading ? "Refreshing" : "Refresh"}</button>} />
-    {bookmarks.error&&<p className="provider-notice" role="alert">{bookmarks.error}<button className="text-button" onClick={()=>void bookmarks.refresh()}>Retry saved events</button></p>}
+    {allowSaving && bookmarks.error&&<p className="provider-notice" role="alert">{bookmarks.error}<button className="text-button" onClick={()=>void bookmarks.refresh()}>Retry saved events</button></p>}
     <div className="feed-status"><span><i className="live-dot" /> Auto-refreshes every 5 minutes</span><span>{live.feed ? "Updated " + new Date(live.feed.fetchedAt).toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" }) + " IST" : "Connecting to providers"}</span></div>
     {live.feed?.providers.filter(provider => provider.status === "unavailable").map(provider => <p className="provider-notice" key={provider.name}>{provider.name} is temporarily unavailable. <a href={provider.name === "Unstop" ? "https://unstop.com/hackathons" : "https://devfolio.co/hackathons"} target="_blank" rel="noreferrer">Browse {provider.name} <ExternalLink size={12} /></a></p>)}
     {live.error && <p className="provider-notice" role="alert">{live.error}{live.feed && " Showing the last successful results."}</p>}
     <div className="filter-row">{["All events", "Online", "Offline", "Hybrid", "Unstop", "Devfolio"].map(item => <button key={item} aria-pressed={filter === item} className={filter === item ? "filter-chip active" : "filter-chip"} onClick={() => setFilter(item)}>{item}</button>)}</div>
     <div className="location-filter"><label><MapPin size={16} /><span>Location</span><select aria-label="Location" value={location} onChange={event => setLocation(event.target.value)}><option value="all">All locations</option><option value="online">Online · join anywhere</option><option value="unknown">Venue not listed</option>{cities.map(city => <option key={city} value={city}>{city}</option>)}{!["all", "online", "unknown", ...cities].includes(location) && <option value={location}>{location}</option>}</select></label><span role="status">{events.length} matching hackathons</span>{(location !== "all" || filter !== "All events") && <button className="text-button" onClick={() => { setLocation("all"); setFilter("All events"); }}>Reset filters</button>}</div>
     <div className="sort-control"><label>Sort by<select aria-label="Sort hackathons" value={sort} onChange={e=>setSort(e.target.value)}><option value="deadline">Registration deadline · soonest first</option><option value="start">Start date · soonest first</option><option value="title">Name · A–Z</option></select></label><span>Unknown dates appear last.</span></div>
-    <div className="card-grid">{events.map((event, index) => <article className="event-card" key={event.id}><div className={"event-art art-" + (index % 4)}><span>{event.source}</span><Trophy size={47} strokeWidth={1} /><small>{event.tags[0] ?? "Build. Learn. Connect."}</small></div><div className="event-body"><div className="event-top"><span className="source-badge">{event.source}</span><span className="event-mode">{event.mode === "Online" ? <Wifi size={12} /> : <MapPin size={12} />}{event.mode}</span></div><h2>{event.title}</h2><p>{event.host}</p><p className="event-location"><MapPin size={13} />{event.mode === "Online" ? "Online · join anywhere" : event.location || "Venue not listed · check event page"}</p><div className="tag-row">{event.tags.slice(0, 3).map(tag => <span key={tag}>{tag}</span>)}</div><dl><div><dt>Starts</dt><dd>{eventDate(event.startsAt)}</dd></div><div><dt>Apply by</dt><dd>{eventDate(event.deadline)}</dd></div></dl><a className="secondary-button full" href={event.href} target="_blank" rel="noreferrer">View on {event.source} <ArrowUpRight size={16} /></a><BookmarkActions event={event} bookmarks={bookmarks} now={now}/></div></article>)}</div>
+    <div className="card-grid">{events.map((event,index)=><HackathonCard key={event.id} event={event} index={index} now={now} bookmarks={bookmarks} allowSaving={allowSaving}/>)}</div>
     {live.loading && !live.feed && <div className="loading-grid">{[0, 1, 2].map(item => <div className="event-skeleton" key={item} />)}</div>}
     {(savedOnly?bookmarks.ready:Boolean(live.feed)) && !events.length && !live.error && <div className="empty-clubs"><Trophy size={26} /><strong>{savedOnly?"No saved hackathons in this view":"No open hackathons match this view"}</strong><span>{savedOnly?"Save an event from Hackathons or reset your filters.":"Try another filter or refresh the feed."}</span></div>}
   </>;
 }
 
 function UserSettings({ viewer, role, theme, toggleTheme, onSignOut }: { viewer: { name: string; email: string; authenticated: boolean }; role: Role; theme: "light" | "dark"; toggleTheme: () => void; onSignOut: () => void }) {
-  const [tab, setTab] = useState("My portfolio");
-  return <><PageHeading eyebrow="Make yourself at home" title="User settings" copy="Your profile, your preferences, your space." /><div className="settings-tabs" role="tablist" aria-label="User settings">{["My portfolio", "Appearance", "Account"].map(item => <button key={item} role="tab" aria-selected={tab === item} aria-controls="settings-content" className={tab === item ? "active" : ""} onClick={() => setTab(item)}>{item}</button>)}</div><div id="settings-content" role="tabpanel" aria-label={tab}>{tab === "My portfolio" && <Portfolio viewer={viewer} role={role} />}{tab === "Appearance" && <section className="panel settings-panel"><h2>A space that feels like you.</h2><p>Choose a light or dark appearance. Your choice is saved on this device.</p><div className="appearance-options">{(["light", "dark"] as const).map(mode => <button key={mode} className={theme === mode ? "appearance-choice selected" : "appearance-choice"} aria-pressed={theme === mode} onClick={() => { if (theme !== mode) toggleTheme(); }}><span className={"appearance-preview " + mode}><i /><i /><i /></span><strong>{mode === "light" ? <Sun size={16} /> : <Moon size={16} />}{mode === "light" ? "Light" : "Dark"}{theme === mode && <CheckCircle2 size={16} />}</strong></button>)}</div><div className="settings-row"><span><strong>Typography</strong><small>SF Pro Display</small></span><span>Apple SF Pro</span></div></section>}{tab === "Account" && <section className="panel settings-panel"><h2>Your account</h2><div className="settings-row"><span>Name</span><strong>{viewer.name}</strong></div><div className="settings-row"><span>Email</span><strong>{viewer.email}</strong></div><div className="settings-row"><span>Portal</span><strong>{role}</strong></div><button className="secondary-button" onClick={onSignOut}><LogOut size={16} /> Sign out</button></section>}</div></>;
+  const [tab, setTab] = useState("Appearance");
+  return <><PageHeading eyebrow="Make yourself at home" title="User settings" copy="Your appearance and account preferences." /><div className="settings-tabs" role="tablist" aria-label="User settings">{["Appearance", "Account"].map(item => <button key={item} role="tab" aria-selected={tab === item} aria-controls="settings-content" className={tab === item ? "active" : ""} onClick={() => setTab(item)}>{item}</button>)}</div><div id="settings-content" role="tabpanel" aria-label={tab}>{tab === "Appearance" && <section className="panel settings-panel"><h2>A space that feels like you.</h2><p>Choose a light or dark appearance. Your choice is saved on this device.</p><div className="appearance-options">{(["light", "dark"] as const).map(mode => <button key={mode} className={theme === mode ? "appearance-choice selected" : "appearance-choice"} aria-pressed={theme === mode} onClick={() => { if (theme !== mode) toggleTheme(); }}><span className={"appearance-preview " + mode}><i /><i /><i /></span><strong>{mode === "light" ? <Sun size={16} /> : <Moon size={16} />}{mode === "light" ? "Light" : "Dark"}{theme === mode && <CheckCircle2 size={16} />}</strong></button>)}</div><div className="settings-row"><span><strong>Typography</strong><small>SF Pro Display</small></span><span>Apple SF Pro</span></div></section>}{tab === "Account" && <section className="panel settings-panel"><h2>Your account</h2><div className="settings-row"><span>Name</span><strong>{viewer.name}</strong></div><div className="settings-row"><span>Email</span><strong>{viewer.email}</strong></div><div className="settings-row"><span>Portal</span><strong>{role}</strong></div><button className="secondary-button" onClick={onSignOut}><LogOut size={16} /> Sign out</button></section>}</div></>;
 }
 
 function Clubs({ clubs, filter, setFilter }: { clubs: typeof clubData; filter: string; setFilter: (s: string) => void }) {
@@ -260,23 +286,5 @@ function Faculty({ query = "" }: { query?: string }) {
     {people.length === 0 && <div className="empty-clubs"><Search size={22} /><strong>No faculty match your search</strong><span>Try another name or department, or clear the search.</span></div>}
   </>;
 }
-
-
-function Admin() {
-  const initialRows = [["AI Research Symposium","Dr. Meera Raman","Event"],["National Coding Challenge","Pranav Iyer","Achievement"],["Robotics Workshop","Code Excellence","Event"]];
-  const [approved, setApproved] = useState<string[]>([]);
-  const readiness = [["University SSO","Awaiting identity-provider details"],["Official roster import","Schema ready; university export required"],["Data retention policy","Requires university approval"],["External event APIs","Provider credentials required"]];
-  return <><PageHeading eyebrow="Restricted area" title="Administration console" copy="Review access, content approvals and system security." /><div className="security-banner"><ShieldCheck size={21} /><div><strong>Security status: local demonstration</strong><p>Role mismatch protection active · Production SSO and MFA still require university configuration</p></div><button>View audit log</button></div><section className="metric-grid admin-metrics"><Metric icon={UsersRound} label="Demo accounts" value="03" note="One account per role" /><Metric icon={CheckCircle2} label="Pending approvals" value={String(initialRows.length-approved.length).padStart(2,"0")} note="Demo approval queue" /><Metric icon={LockKeyhole} label="Access reviews" value="01" note="Required before release" /><Metric icon={ShieldCheck} label="Security alerts" value="00" note="Current local session" /></section><section className="panel admin-table"><div className="panel-title"><div><p className="eyebrow">Approval queue</p><h2>Items needing review</h2></div></div><div className="table-row table-head"><span>Item</span><span>Submitted by</span><span>Type</span><span>Status</span><span /></div>{initialRows.map((row) => <div className="table-row" key={row[0]}><strong>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span>{approved.includes(row[0]) ? <span className="verified"><CheckCircle2 size={14}/>Approved</span> : <span className="pending">Needs review</span>}<button disabled={approved.includes(row[0])} onClick={()=>setApproved(items=>[...items,row[0]])}>{approved.includes(row[0]) ? "Complete" : "Approve"}</button></div>)}</section><section className="panel readiness-panel"><div className="panel-title"><div><p className="eyebrow">Launch controls</p><h2>Production dependencies</h2></div></div>{readiness.map(([item,note])=><div className="readiness-row" key={item}><span className="readiness-status"/><div><strong>{item}</strong><p>{note}</p></div><span>Blocked</span></div>)}</section></>;
-}
-
-
-
-
-
-
-
-
-
-
 
 

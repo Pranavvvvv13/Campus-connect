@@ -17,6 +17,12 @@ Run these commands from the extracted campus-connect folder. Keep the terminal o
 
 ## Account workspace features
 
+- Admin sign-in opens a database-backed dashboard with Overview, Accounts and Activity views. Counts reflect the three demo sign-in accounts, saved portfolios, active sessions, bookmarks and pending team requests. Mock directory profiles are not sign-in accounts.
+- Account controls support suspension, restoration and session revocation. Each change requires a reason and writes a persistent audit entry. Suspended accounts cannot sign in or use authenticated APIs; administrator accounts are protected from these controls. No accounts or portfolio contents are deleted.
+- Run `node tests/admin-api.mjs` against the local server to verify role enforcement and access controls. It restores student access and leaves clearly labelled automated verification entries in the audit log.
+
+- Faculty and administrators have a Student portfolios directory with name/ID/project search and department, year and skill filters. Eight fictional profiles are clearly marked as mock students. Student account portfolios appear only after enabling “Share my portfolio with faculty” in Edit portfolio. The API rejects student access and excludes private email/account fields.
+
 - Portfolios, hackathon bookmarks, reminder preferences and team requests are stored in the local Cloudflare D1 database. The `DB` binding is enabled in `.openai/hosting.json`; the workspace schema initializes automatically.
 - The local database and sessions persist in ignored `.wrangler` state across development server restarts. Do not delete that state if you need your saved data.
 - Demo sign-in now creates a server session with an HttpOnly cookie, checks the selected role on the server, and isolates saved data by university ID. Demo login is restricted to local development. It is not production university authentication.
@@ -37,6 +43,15 @@ node tests/workspace-api.mjs
 This package includes the spatial minimalist UI, light/dark mode and nine clubs. Hackathon listings are fetched live from Devfolio and Unstop and refresh every five minutes while the page is visible. SF Pro Display is bundled locally; My portfolio is under User settings. Login is a local demo, not production authentication.
 
 ## Demo accounts
+
+### Demonstrate the working model
+
+1. Sign in as Student and open **My portfolio** from the navigation. Add skills, a project and an achievement, then enable **Share my portfolio with faculty** and save.
+2. Sign out under **Settings → Account**, sign in as Faculty, and open **Student portfolios**. Search for the student name or a project keyword and open the saved portfolio. The eight mock students remain clearly labelled.
+3. Open **Hackathons** and switch between Devfolio and Unstop. Artwork is fetched from provider metadata (Unstop uses logos where banners are absent). Open **Event details** to inspect the description and dates, then follow the provider application link.
+4. Student accounts can save an event and export its deadline to their calendar. Faculty accounts have no saved-hackathon controls.
+
+Event artwork loads lazily and falls back to a styled card if it fails. Missing eligibility and venue details are referred to the provider; they are not guessed.
 
 | Portal | University ID | Email | Verification code |
 |---|---|---|---|

@@ -11,12 +11,15 @@ export const profileSchema = z.object({
   github: webLink, linkedin: webLink, website: webLink, projects: z.array(entry).max(20), achievements: z.array(entry).max(20),
   teamVisible: z.boolean().default(false), city: z.string().trim().max(100).default(""),
   interests: z.string().trim().max(500).default(""), lookingFor: z.string().trim().max(500).default(""),
+  facultyVisible: z.boolean().default(false), department: z.string().trim().max(100).default("Computer Science & Engineering"), year: z.number().int().min(1).max(4).default(2),
 });
 export type Profile = z.infer<typeof profileSchema>;
 export const eventSchema = z.object({
   id: z.string().max(100), title: z.string().min(1).max(500), host: z.string().max(500), source: z.enum(["Devfolio", "Unstop"]),
   href: z.string().url().max(1000).transform(value=>new URL(value).href), mode: z.enum(["Online", "Offline", "Hybrid"]), location: z.string().max(200).nullable(),
   startsAt: z.string().max(100).nullable(), endsAt: z.string().max(100).nullable(), deadline: z.string().max(100).nullable(), tags: z.array(z.string().max(200)).max(30),
+  imageUrl: z.string().url().max(2000).refine(value=>value.startsWith("https://")).nullable().optional(), imageKind:z.enum(["banner","logo"]).optional(),
+  description:z.string().max(2000).optional(), eligibility:z.string().max(500).optional(), registrationOpensAt:z.string().max(100).nullable().optional(),
 }).refine(event => {
   const url = new URL(event.href);
   return url.protocol === "https:" && (event.source === "Devfolio" ? url.hostname.endsWith(".devfolio.co") : url.hostname === "unstop.com");

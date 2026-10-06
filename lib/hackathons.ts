@@ -10,7 +10,22 @@ export type Hackathon = {
   endsAt: string | null;
   deadline: string | null;
   tags: string[];
+  imageUrl?: string | null;
+  imageKind?: "banner" | "logo";
+  description?: string;
+  eligibility?: string;
+  registrationOpensAt?: string | null;
 };
+
+export function registrationStatus(event: Hackathon, now: number) {
+  const deadline = Date.parse(event.deadline ?? "");
+  const end = Date.parse(event.endsAt ?? "");
+  const opens = Date.parse(event.registrationOpensAt ?? "");
+  if (deadline <= now || end <= now) return "Closed";
+  if (opens > now) return "Opens soon";
+  if (!Number.isFinite(deadline)) return "Check registration";
+  return deadline - now <= 3 * 86400000 ? "Closing soon" : "Open";
+}
 
 export type HackathonFeed = {
   events: Hackathon[];

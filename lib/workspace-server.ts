@@ -22,6 +22,8 @@ export async function requireAccount(request: Request): Promise<DemoSession> {
   const db = await workspaceDb();
   const row = await db.prepare("SELECT account_id FROM workspace_sessions WHERE token_hash=? AND expires_at>?").bind(await tokenHash(token), Date.now()).first<{ account_id: string }>();
   if (!row || !demoDirectory[row.account_id]) throw new ApiError(401, "Your session expired. Please sign in again.");
+  const status=await db.prepare("SELECT suspended FROM workspace_account_status WHERE account_id=?").bind(row.account_id).first<{suspended:number}>();
+  if(status?.suspended)throw new ApiError(403,"Your account is suspended. Contact the campus administrator.");
   return demoDirectory[row.account_id];
 }
 export async function jsonBody(request: Request) {

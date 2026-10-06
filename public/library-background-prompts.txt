@@ -1,0 +1,7 @@
+Generated with the built-in image_gen tool.
+
+Light mode prompt:
+Generate a photorealistic wide 16:9 architectural photograph for a university portal full-screen background: a beautiful modern university library reading hall, tall oak bookshelves filled with books on both sides, study tables and chairs, large windows, soft natural daylight, warm neutral wood and cream stone, quiet scholarly atmosphere, realistic materials. Wide eye-level symmetrical composition, central area calm and low-detail so a translucent dashboard can overlay it, detailed library visible around the edges. No people, no text, no logos, no interface. Light mode daytime version. Save generated image file.
+
+Dark mode edit prompt (using the generated daytime library as reference):
+Edit this library photograph into its matching nighttime dark-mode background. Preserve exact architecture, bookshelves, tables, camera perspective and composition. Night outside the windows, deep navy sky; softly illuminated warm amber reading lamps and bookshelf lighting, dim atmospheric scholarly library. Keep room details visible with realistic photographic exposure. No people, no text, no logos or interface. Wide 16:9.

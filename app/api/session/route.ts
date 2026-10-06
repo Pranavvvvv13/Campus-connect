@@ -11,6 +11,8 @@ export async function POST(request: Request) {
     const account = demoDirectory[String(body.universityId ?? "").trim().toUpperCase()];
     if (!account || account.email.toLowerCase() !== String(body.email ?? "").trim().toLowerCase() || account.role !== body.role || body.code !== "246810") throw new ApiError(401, "The account details or verification code are incorrect.");
     const db = await workspaceDb();
+    const status=await db.prepare("SELECT suspended FROM workspace_account_status WHERE account_id=?").bind(account.universityId).first<{suspended:number}>();
+    if(status?.suspended)throw new ApiError(403,"Your account is suspended. Contact the campus administrator.");
     const token = [...crypto.getRandomValues(new Uint8Array(32))].map(value => value.toString(16).padStart(2, "0")).join("");
     const oldToken = sessionToken(request);
     await db.batch([

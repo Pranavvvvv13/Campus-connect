@@ -11,7 +11,7 @@
   --pill: rgba(244, 246, 240, .26);
   --line: rgba(255, 255, 255, .28);
   --line-strong: rgba(255, 255, 255, .55);
-  --scene: linear-gradient(rgba(33, 34, 31, .12), rgba(33, 34, 31, .12)), url('/spatial-room.png') center / cover fixed;
+  --scene: linear-gradient(rgba(33, 34, 31, .12), rgba(33, 34, 31, .12)), url('/library-day.png') center / cover fixed;
   background: var(--scene);
 }
 .theme-root.theme-dark {
@@ -24,7 +24,7 @@
   --pill: rgba(233, 230, 219, .21);
   --line: rgba(255, 255, 255, .12);
   --line-strong: rgba(255, 255, 255, .28);
-  --scene: linear-gradient(rgba(12, 12, 11, .15), rgba(12, 12, 11, .15)), url('/spatial-room-night.png') center / cover fixed;
+  --scene: linear-gradient(rgba(12, 12, 11, .15), rgba(12, 12, 11, .15)), url('/library-night.png') center / cover fixed;
 }
 .theme-root::before, .spatial-scene::before, .login-shell::before { display: none; }
 .spatial-scene { padding: 6vh 5vw 100px 115px; }
