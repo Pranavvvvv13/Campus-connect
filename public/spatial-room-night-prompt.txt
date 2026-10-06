@@ -1,0 +1,3 @@
+Edited with built-in imagegen, using spatial-room.png as the reference.
+
+Edit lighting only: make this exact room photograph look taken at night. Preserve camera, composition, all furniture, sofa pillows, table items, shelves, plant, rug, window and curtains exactly. Outside window is dark nighttime with subtle cool blue moonlight, no daylight or bright sky. The existing standing lamp and shelf lights are on, producing warm amber pools of light and realistic soft shadows. Room dim but visibly detailed, photorealistic interior night photography. Do not add or remove objects, people, text or UI.

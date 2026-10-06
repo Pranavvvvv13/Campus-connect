@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, ArrowUpRight, Bookmark, Compass, Settings, RefreshCw, MapPin, Wifi, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, ExternalLink, GraduationCap, IdCard, KeyRound, LayoutDashboard, LockKeyhole, LogOut, Mail, Menu, Microscope, Moon, Search, ShieldCheck, Sparkles, Sun, Trophy, UsersRound, X } from "lucide-react";
+import { Award, ArrowUpRight, Bookmark, Settings, RefreshCw, MapPin, Wifi, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, ExternalLink, GraduationCap, IdCard, KeyRound, LayoutDashboard, LockKeyhole, LogOut, Mail, Microscope, Moon, Search, ShieldCheck, Sparkles, Sun, Trophy, UsersRound } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { eventDate, type HackathonFeed } from "@/lib/hackathons";
 import facultyDirectory from "@/lib/faculty-data.json";
@@ -9,10 +9,10 @@ import { demoDirectory, type Role, type DemoSession } from "@/lib/demo-accounts"
 import { workspaceRequest } from "@/lib/workspace-client";
 import { useBookmarks } from "@/hooks/use-bookmarks";
 import { BookmarkActions, DeadlineReminders } from "@/components/hackathon-saving";
-import TeamFinder from "@/components/team-finder";
+
 import { sortHackathons } from "@/lib/workspace-model";
 
-type Section = "dashboard" | "hackathons" | "saved" | "teams" | "faculty" | "clubs" | "settings" | "admin";
+type Section = "dashboard" | "hackathons" | "saved" | "faculty" | "clubs" | "settings" | "admin";
 
 
 
@@ -34,7 +34,6 @@ const navItems: { id: Section; label: string; icon: typeof LayoutDashboard; role
   { id: "dashboard", label: "Overview", icon: LayoutDashboard },
   { id: "hackathons", label: "Hackathons", icon: Trophy },
   { id: "saved", label: "Saved hackathons", icon: Bookmark },
-  { id: "teams", label: "Team finder", icon: UsersRound },
   { id: "faculty", label: "Faculty research", icon: Microscope },
   { id: "clubs", label: "Clubs & events", icon: UsersRound },
   { id: "admin", label: "Admin console", icon: ShieldCheck, roles: ["Admin"] },
@@ -77,7 +76,7 @@ export default function CampusPortal({ viewer }: { viewer: { name: string; email
 
 function ThemeToggle({ theme, toggleTheme }: { theme: "light" | "dark"; toggleTheme: () => void }) {
   return <button className="theme-toggle" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`} title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}>
-    {theme === "light" ? <Moon size={17} /> : <Sun size={17} />}
+    {theme === "light" ? <Moon size={17} /> : <Sun size={17} />}<span>{theme === "light" ? "Dark mode" : "Light mode"}</span>
   </button>;
 }
 
@@ -138,7 +137,7 @@ function useHackathonFeed() {
 function Portal({ viewer, assignedRole, onSignOut, theme, toggleTheme }: { viewer: { name: string; email: string; authenticated: boolean }; assignedRole: Role; onSignOut: () => void; theme: "light" | "dark"; toggleTheme: () => void }) {
   const [section, setSection] = useState<Section>("dashboard");
   const role = assignedRole;
-  const [mobileOpen, setMobileOpen] = useState(false);
+
   const [query, setQuery] = useState("");
   const [clubFilter, setClubFilter] = useState("All");
   const live = useHackathonFeed();
@@ -151,28 +150,24 @@ function Portal({ viewer, assignedRole, onSignOut, theme, toggleTheme }: { viewe
     const categories: Record<string, RegExp> = { Technical: /technical|technology|development|web3|ai|data|programming|security|testing/i, Creative: /creative|design|content|editing/i, Media: /media|pr|marketing/i, Management: /management|operations/i, Security: /security|testing/i };
     return clubData.filter(club => (clubFilter === "All" || club.domains.some(domain => categories[clubFilter]?.test(domain))) && [club.name, ...club.domains].join(" ").toLowerCase().includes(query.trim().toLowerCase()));
   }, [clubFilter, query]);
-  const go = (id: Section) => { setSection(id); setQuery(""); setMobileOpen(false); contentRef.current?.scrollTo({top:0}); };
+  const go = (id: Section) => { setSection(id); setQuery(""); contentRef.current?.scrollTo({top:0}); };
   const initials = viewer.name.split(" ").map(part => part[0]).slice(0, 2).join("");
   const navigation = navItems.filter(item => !item.roles || item.roles.includes(role));
   return <div className="spatial-scene">
     <div className="ambient-shape ambient-one" aria-hidden="true" /><div className="ambient-shape ambient-two" aria-hidden="true" />
+    <nav className="spatial-rail" aria-label="Quick navigation">
+      <span className="rail-brand"><GraduationCap size={23}/></span>
+      {navigation.map(({id,label,icon:Icon}) => <button key={id} className={`rail-button ${section === id ? "active" : ""}`} onClick={()=>go(id)} aria-label={label} aria-current={section === id ? "page" : undefined} title={label}><Icon size={19}/></button>)}
+      <span className="rail-divider"/><button className="rail-button" onClick={()=>go("settings")} aria-label="User settings" title="User settings"><Settings size={19}/></button>
+    </nav>
     <div className="portal-shell">
-      <aside className={"sidebar " + (mobileOpen ? "open" : "")} aria-label="Primary navigation">
-        <div className="brand"><div className="brand-mark"><GraduationCap size={23} /></div><div><strong>CampusConnect</strong><span>Your campus, connected.</span></div><button className="icon-button mobile-close" onClick={() => setMobileOpen(false)} aria-label="Close menu"><X size={18} /></button></div>
-        <div className="workspace-label"><span className="workspace-dot" /> SRM Ramapuram <small>{role} workspace</small></div>
-        <nav><p className="nav-label">Discover</p>{navigation.map(({ id, label, icon: Icon }) => <button key={id} className={section === id ? "nav-item active" : "nav-item"} onClick={() => go(id)}><Icon size={18} /><span>{label}</span>{section === id && <ChevronRight size={14} />}</button>)}</nav>
-        <div className="sidebar-note"><Compass size={20} /><strong>A little curiosity.<br />A lot of possibility.</strong><span>Find your next thing.</span><button className="text-button" onClick={() => go("hackathons")}>Explore opportunities <ArrowUpRight size={15} /></button></div>
-        <button className={section === "settings" ? "profile-mini selected" : "profile-mini"} onClick={() => go("settings")} aria-label="Open user settings"><span className="avatar">{initials}</span><span><strong>{viewer.name}</strong><small>User settings</small></span><Settings size={17} /></button>
-      </aside>
-      {mobileOpen && <button className="backdrop" aria-label="Close navigation" onClick={() => setMobileOpen(false)} />}
       <main className="main-area">
-        <header className="topbar"><div className="window-controls" aria-hidden="true"><i /><i /><i /></div><button className="icon-button menu-button" onClick={() => setMobileOpen(true)} aria-label="Open menu"><Menu size={20} /></button><span className="breadcrumb">Workspace <ChevronRight size={12} /> {section === "settings" ? "User settings" : navigation.find(item => item.id === section)?.label}</span><div className="top-actions"><ThemeToggle theme={theme} toggleTheme={toggleTheme} /><button className="avatar small avatar-button" onClick={() => go("settings")} aria-label="Open user settings">{initials}</button></div></header>
+        <header className="topbar"><div className="window-controls" aria-hidden="true"><i /><i /><i /></div><span className="portal-wordmark"><GraduationCap size={21}/><strong>CampusConnect</strong></span><span className="breadcrumb">Workspace <ChevronRight size={12} /> {section === "settings" ? "User settings" : navigation.find(item => item.id === section)?.label}</span><div className="top-actions"><ThemeToggle theme={theme} toggleTheme={toggleTheme} /><button className="avatar small avatar-button" onClick={() => go("settings")} aria-label="Open user settings">{initials}</button></div></header>
         <div className="page-content" ref={contentRef}>
           <DeadlineReminders saved={currentSaved} now={now} onOpen={()=>go("saved")}/>
           {section !== "settings" && <label className="global-search"><Search size={17} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder={section === "hackathons" ? "Search hackathons, cities and organisers" : "Search people, clubs and opportunities"} aria-label="Search portal" /><kbd>⌕</kbd></label>}
           {section === "dashboard" && <Dashboard role={role} name={viewer.name} go={go} live={live} query={query} />}
           {(section === "hackathons" || section === "saved") && <Hackathons key={section} live={live} query={query} bookmarks={bookmarks} now={now} savedOnly={section === "saved"} />}
-          {section === "teams" && <TeamFinder query={query} onEditProfile={()=>go("settings")}/>}
           {section === "clubs" && <Clubs clubs={filteredClubs} filter={clubFilter} setFilter={setClubFilter} />}
           {section === "faculty" && <Faculty query={query} />}
           {section === "settings" && <UserSettings viewer={viewer} role={role} theme={theme} toggleTheme={toggleTheme} onSignOut={onSignOut} />}
@@ -180,6 +175,7 @@ function Portal({ viewer, assignedRole, onSignOut, theme, toggleTheme }: { viewe
         </div>
       </main>
     </div>
+    <div className="spatial-dock" aria-label="Workspace shortcuts"><span className="dock-symbol"><GraduationCap size={19}/></span><span><strong>SRM Ramapuram</strong><small>{role} workspace</small></span><span className="dock-divider"/><button onClick={()=>go("hackathons")}><Trophy size={16}/> Explore</button><button onClick={()=>go("saved")}><Bookmark size={16}/> Saved</button><button onClick={()=>go("settings")} aria-label="Open user settings"><Settings size={17}/></button></div>
   </div>;
 }
 
@@ -187,14 +183,14 @@ function PageHeading({ eyebrow, title, copy, action }: { eyebrow: string; title:
 
 function Dashboard({ role, name, go, live, query }: { role: Role; name: string; go: (s: Section) => void; live: ReturnType<typeof useHackathonFeed>; query: string }) {
   const events = (live.feed?.events ?? []).filter(event => [event.title, event.host, ...event.tags].join(" ").toLowerCase().includes(query.toLowerCase())).slice(0, 3);
-  return <>
+  return <div className="spatial-dashboard">
     <div className="section-kicker"><span className="live-dot" /> Your campus, in focus <span>Make room for what’s next.</span></div>
     <section className="welcome-panel"><div><span className="welcome-badge"><Sparkles size={14} /> A world of possibilities</span><h1>Hello, {name.split(" ")[0]}.<br /><span>Find your next spark.</span></h1><p>Ideas worth building. People worth meeting.<br />Your next chapter starts right here.</p><div className="welcome-actions"><button className="primary-button" onClick={() => go("hackathons")}>Explore opportunities <ArrowUpRight size={16} /></button><button className="text-button" onClick={() => go("clubs")}>Find your community <ChevronRight size={16} /></button></div></div><div className="hero-orbits" aria-hidden="true"><div className="orbit-ring ring-one" /><div className="orbit-ring ring-two" /><div className="orbit-ring ring-three" /><span className="orbit-core"><GraduationCap size={43} strokeWidth={1.2} /></span><span className="orbit-node node-one"><Trophy size={21} /></span><span className="orbit-node node-two"><Microscope size={20} /></span><span className="orbit-node node-three"><UsersRound size={21} /></span></div></section>
     <section className="metric-grid"><Metric icon={Trophy} label="Open opportunities" value={live.feed ? String(live.feed.events.length).padStart(2, "0") : "—"} note="From live event listings" /><Metric icon={Microscope} label="Faculty network" value={String(facultyData.length)} note="From the SRM directory" /><Metric icon={UsersRound} label="Campus communities" value="09" note="Find where you belong" /></section>
     <section className="panel opportunity-panel"><div className="panel-title"><div><p className="eyebrow">Go build something</p><h2>On your radar</h2></div><button className="text-button" onClick={() => go("hackathons")}>All opportunities <ArrowUpRight size={16} /></button></div><div className="compact-list">{events.map(event => <a key={event.id} href={event.href} target="_blank" rel="noreferrer" className="compact-event"><span className={"event-tile " + event.source.toLowerCase()}><Trophy size={24} /></span><span><strong>{event.title}</strong><small>{event.source} · {event.mode} · {event.deadline ? "Apply by " + eventDate(event.deadline) : "Starts " + eventDate(event.startsAt)}</small></span><ArrowUpRight size={18} /></a>)}{live.loading && !live.feed && <p className="feed-message">Finding current hackathons…</p>}{live.error && <p className="feed-message" role="alert">{live.error}</p>}{live.feed && !events.length && <p className="feed-message">No open opportunities match your search.</p>}</div></section>
     <div className="explore-grid"><button className="explore-card research" onClick={() => go("faculty")}><span><Microscope size={26} /></span><div><small>Knowledge, shared</small><h2>Meet your mentors.</h2><p>Explore the faculty research network.</p></div><ArrowUpRight size={21} /></button><button className="explore-card community" onClick={() => go("clubs")}><span><UsersRound size={26} /></span><div><small>Better, together</small><h2>Find your people.</h2><p>Nine communities. Endless possibilities.</p></div><ArrowUpRight size={21} /></button></div>
     {role === "Admin" && <button className="text-button" onClick={() => go("admin")}>Open administration console <ChevronRight size={16} /></button>}
-  </>;
+  </div>;
 }
 
 function Hackathons({ live, query, bookmarks, savedOnly, now }: { live: ReturnType<typeof useHackathonFeed>; query: string; bookmarks:ReturnType<typeof useBookmarks>; savedOnly:boolean; now:number }) {
@@ -272,6 +268,10 @@ function Admin() {
   const readiness = [["University SSO","Awaiting identity-provider details"],["Official roster import","Schema ready; university export required"],["Data retention policy","Requires university approval"],["External event APIs","Provider credentials required"]];
   return <><PageHeading eyebrow="Restricted area" title="Administration console" copy="Review access, content approvals and system security." /><div className="security-banner"><ShieldCheck size={21} /><div><strong>Security status: local demonstration</strong><p>Role mismatch protection active · Production SSO and MFA still require university configuration</p></div><button>View audit log</button></div><section className="metric-grid admin-metrics"><Metric icon={UsersRound} label="Demo accounts" value="03" note="One account per role" /><Metric icon={CheckCircle2} label="Pending approvals" value={String(initialRows.length-approved.length).padStart(2,"0")} note="Demo approval queue" /><Metric icon={LockKeyhole} label="Access reviews" value="01" note="Required before release" /><Metric icon={ShieldCheck} label="Security alerts" value="00" note="Current local session" /></section><section className="panel admin-table"><div className="panel-title"><div><p className="eyebrow">Approval queue</p><h2>Items needing review</h2></div></div><div className="table-row table-head"><span>Item</span><span>Submitted by</span><span>Type</span><span>Status</span><span /></div>{initialRows.map((row) => <div className="table-row" key={row[0]}><strong>{row[0]}</strong><span>{row[1]}</span><span>{row[2]}</span>{approved.includes(row[0]) ? <span className="verified"><CheckCircle2 size={14}/>Approved</span> : <span className="pending">Needs review</span>}<button disabled={approved.includes(row[0])} onClick={()=>setApproved(items=>[...items,row[0]])}>{approved.includes(row[0]) ? "Complete" : "Approve"}</button></div>)}</section><section className="panel readiness-panel"><div className="panel-title"><div><p className="eyebrow">Launch controls</p><h2>Production dependencies</h2></div></div>{readiness.map(([item,note])=><div className="readiness-row" key={item}><span className="readiness-status"/><div><strong>{item}</strong><p>{note}</p></div><span>Blocked</span></div>)}</section></>;
 }
+
+
+
+
 
 
 
