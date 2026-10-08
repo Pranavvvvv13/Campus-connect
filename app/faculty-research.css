@@ -1,0 +1,9 @@
+.faculty-research-info { margin: 18px 0; padding-top: 16px; border-top: 1px solid var(--line, #e3e4e0); }
+.faculty-research-info h3 { margin: 0 0 10px; font-size: 12px; font-weight: 600; color: var(--muted, #657064); }
+.faculty-research-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.faculty-research-topics span { max-width: 100%; padding: 5px 8px; border-radius: 7px; background: var(--accent-soft, #edf4df); color: var(--ink, #273321); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+.faculty-research-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 12px 0; }
+.faculty-research-metrics dt { font-size: 11px; color: var(--muted, #657064); }
+.faculty-research-metrics dd { margin: 5px 0 0; font-size: 21px; font-weight: 600; color: var(--ink, #273321); }
+.faculty-research-info .faculty-research-date { font-size: 11px; line-height: 1.6; color: var(--muted, #657064); margin: 10px 0; }
+.faculty-research-date a { color: inherit; text-decoration: underline; }

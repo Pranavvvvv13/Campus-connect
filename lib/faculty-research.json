@@ -1,0 +1,1514 @@
+{
+  "retrievedOn": "2026-10-08",
+  "source": "Google Scholar public profiles; identity links from official SRM faculty PDFs",
+  "faculty": [
+    {
+      "email": "senthila3@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=DSN4V04AAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2023/08/04_SENTHILSELVI.pdf",
+      "scholarName": "senthilselvi",
+      "scholarAffiliation": "Professor, SRM Institute of Science and Technology, Ramapuram",
+      "interests": [
+        "Image processing"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 1766,
+          "hIndex": 21,
+          "i10Index": 43
+        },
+        "since2021": {
+          "citations": 1717,
+          "hIndex": 20,
+          "i10Index": 42
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "veenas1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "suthaj@srmist.edu.in",
+      "status": "unavailable",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=8WurHUAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/6_TET253_Dr.J.Sutha_.pdf",
+      "scholarName": null,
+      "scholarAffiliation": null,
+      "interests": [],
+      "metrics": null,
+      "reason": "The published Scholar link did not return a readable public profile."
+    },
+    {
+      "email": "subhashr2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sankarrn@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=9HXXOdMAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/8_TET331_Dr.N.Sankar-Ram.pdf",
+      "scholarName": "SANKARRAM N",
+      "scholarAffiliation": "SRM Institute of Science and Technology",
+      "interests": [
+        "Software Architecture Networks and Security"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 132,
+          "hIndex": 7,
+          "i10Index": 6
+        },
+        "since2021": {
+          "citations": 73,
+          "hIndex": 5,
+          "i10Index": 1
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "ramachat1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rameshk9@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "shinyduj@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=ptAd6xsAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2023/08/05_Shiny-Duela.pdf",
+      "scholarName": "Dr. J Shiny Duela",
+      "scholarAffiliation": "Associate Professor",
+      "interests": [
+        "Cyber Security",
+        "Cloud Data Security",
+        "Blockchain"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 381,
+          "hIndex": 10,
+          "i10Index": 11
+        },
+        "since2021": {
+          "citations": 376,
+          "hIndex": 10,
+          "i10Index": 11
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "umamagea@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=yEe2FzcAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2023/08/07_Dr.A.Umamageswari.pdf",
+      "scholarName": "A.Umamageswari",
+      "scholarAffiliation": "Associate Professor, Department of CSE, SRM Institute of Science and Technology, Ramapuram",
+      "interests": [
+        "Security in medical image communication"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 387,
+          "hIndex": 9,
+          "i10Index": 8
+        },
+        "since2021": {
+          "citations": 271,
+          "hIndex": 8,
+          "i10Index": 6
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "sathyas6@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "azhagirm@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=2NLahIAAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/13_T671_AZHAGIRI.docx.pdf",
+      "scholarName": "Azhagiri Mahendiran",
+      "scholarAffiliation": "Associate Professor, SRM Institute of Science and Technology, Ramapuram Campus",
+      "interests": [
+        "Networking",
+        "Network Security",
+        "Machine Learning",
+        "Image Processing",
+        "Agricultural Engineering"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 198,
+          "hIndex": 8,
+          "i10Index": 6
+        },
+        "since2021": {
+          "citations": 180,
+          "hIndex": 8,
+          "i10Index": 6
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "subashkr@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sureshs12@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "farithat@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=_sVD4AUAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/16_T1101_Dr.J-Faritha-Banu_CSE.pdf",
+      "scholarName": "Dr Faritha Banu J",
+      "scholarAffiliation": "Associate Professor, Department of CSE, SRM Institute of Science and Technology Ramapuram",
+      "interests": [
+        "Networks",
+        "Machine Learning",
+        "VoIP",
+        "Security"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 522,
+          "hIndex": 11,
+          "i10Index": 12
+        },
+        "since2021": {
+          "citations": 481,
+          "hIndex": 10,
+          "i10Index": 10
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "amirthat@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rajarats@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "usharuba@srmist.edu.in",
+      "status": "unavailable",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=gthyKX4AAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2024/03/Dr.A.Usha-Ruby.pdf",
+      "scholarName": null,
+      "scholarAffiliation": null,
+      "interests": [],
+      "metrics": null,
+      "reason": "The published Scholar link did not return a readable public profile."
+    },
+    {
+      "email": "jeanjusj@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "mugunthr@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "manohars1@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=zpBbihIAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/02/21_MANOHAR-S-_TET356.docx.pdf",
+      "scholarName": "S.Manohar",
+      "scholarAffiliation": "Professor",
+      "interests": [
+        "Computer Network and Security",
+        "Wireless Mobile and Ad Hoc Network",
+        "WSN"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 97,
+          "hIndex": 5,
+          "i10Index": 4
+        },
+        "since2021": {
+          "citations": 97,
+          "hIndex": 5,
+          "i10Index": 4
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "ranjitha3@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "saravans17@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rajalakd2@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=9JrZCPkAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/25_TET389_Dr.D.Rajalakshmi.pdf",
+      "scholarName": "Rajalakshmi D",
+      "scholarAffiliation": "Associate Professor, Department of CSE, SRM Institute of Science and Technology, Ramapuram, Chennai",
+      "interests": [
+        "Machine Learning and Deep Learning",
+        "Time Series Data Analysis and Pattern Matching",
+        "Network Security"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 101,
+          "hIndex": 7,
+          "i10Index": 4
+        },
+        "since2021": {
+          "citations": 82,
+          "hIndex": 6,
+          "i10Index": 4
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "bennetm@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "antonym@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=-fw6XosAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/27_T248_Dr.AntonyVigil-2.pdf",
+      "scholarName": "Dr.M.S.Antony Vigil",
+      "scholarAffiliation": "SRM Institute of Science and Technology",
+      "interests": [
+        "Image Processing",
+        "Artificial Intelligence",
+        "Machine Learning"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 116,
+          "hIndex": 5,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 114,
+          "hIndex": 5,
+          "i10Index": 3
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "angelinr1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "devahemd@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sabithap@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "saraswae@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=s3dzAhwAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/31_T563_Saraswathi.docx.pdf",
+      "scholarName": "Saraswathi E",
+      "scholarAffiliation": "SRM Institute of Science and Technology",
+      "interests": [
+        "Deep Learning"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 94,
+          "hIndex": 7,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 89,
+          "hIndex": 7,
+          "i10Index": 3
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "visnudhs@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=PEXGE6IAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/32_CSE_Dr.S.Visnu-Dharsini.pdf",
+      "scholarName": "Visnudharsini S",
+      "scholarAffiliation": "SRMIST",
+      "interests": [
+        "cloud computing",
+        "machine learning"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 51,
+          "hIndex": 4,
+          "i10Index": 1
+        },
+        "since2021": {
+          "citations": 46,
+          "hIndex": 4,
+          "i10Index": 1
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "prabum@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "subashini@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "gowthamj@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "aarthis1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sathyar@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "minus@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "ashwinic@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sridevis@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "ramyak2@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=DcAlKOMAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/41_CS_GT_Dr.-Ramya-T862-1.pdf",
+      "scholarName": "RAMYA K",
+      "scholarAffiliation": "srm university",
+      "interests": [],
+      "metrics": null,
+      "reason": null
+    },
+    {
+      "email": "kingslyr1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "praveena@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "aarthib@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "judyflab@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "reenietanya@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sivasank1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "jayalakp@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "bhuvaner3@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=8bmkZp0AAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/49_T1027-Dr.R.BHUVANESWARI.pdf",
+      "scholarName": "Bhuvaneswari R",
+      "scholarAffiliation": "Unknown affiliation",
+      "interests": [],
+      "metrics": {
+        "all": {
+          "citations": 159,
+          "hIndex": 5,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 104,
+          "hIndex": 4,
+          "i10Index": 3
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "gowriv1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "suganthn@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=7ycVPbwAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2023/08/48_Dr.N.Suganthi.pdf",
+      "scholarName": "Suganthi N",
+      "scholarAffiliation": "Department of Computer Science and Engineering, SRM IST, Ramapuram Campus",
+      "interests": [
+        "Computer Networks",
+        "Big Data",
+        "IoT"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 143,
+          "hIndex": 6,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 133,
+          "hIndex": 6,
+          "i10Index": 3
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "deepas1@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=op7EVDAAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2023/08/50_Dr.S.DEEPA_.pdf",
+      "scholarName": "Dr.S.Deepa",
+      "scholarAffiliation": "SRM Institute of Science and Technology",
+      "interests": [
+        "Image processing",
+        "Pattern Recognition"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 168,
+          "hIndex": 7,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 156,
+          "hIndex": 7,
+          "i10Index": 2
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "menakas1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "thirunea@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "deenag@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=XYwHWtkAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/55_T1074-Dr.G.Deena_.docx.pdf",
+      "scholarName": "Dr.Deena G",
+      "scholarAffiliation": "SRMIST",
+      "interests": [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Knowledge Based System"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 148,
+          "hIndex": 8,
+          "i10Index": 6
+        },
+        "since2021": {
+          "citations": 132,
+          "hIndex": 7,
+          "i10Index": 5
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "sajinis@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "shanmugc1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "srilekha@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "ancybrew@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sadhasim@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "vadivela@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "ezravets@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "arthyj@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "manjua1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "archanat@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "mahasrem@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rubinbos@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "juslinsj@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sathyas5@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "abiramis3@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sujathak@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "reginr@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "jayabhas@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rajasaranya@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "preethid1@srmist.edu.in",
+      "status": "review-needed",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=38iO7egAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2023/08/95_Dr.Preethi-D.pdf",
+      "scholarName": "Dr. Preethi D",
+      "scholarAffiliation": "Assistant Prof, CSE(SOC), Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology",
+      "interests": [
+        "Network Security",
+        "Machine Learning",
+        "Deep Learning"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 782,
+          "hIndex": 9,
+          "i10Index": 9
+        },
+        "since2021": {
+          "citations": 755,
+          "hIndex": 9,
+          "i10Index": 9
+        }
+      },
+      "reason": "Scholar lists a different institution; identity requires review before research data is displayed."
+    },
+    {
+      "email": "gangadeg@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "jospinjj@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "saravanc2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "chitram2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "lakshmis9@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "abiramis5@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "subhak4@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "cyptoj@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "meivezhg@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "kamaless@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "kudiyarc@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "vinothr2@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=4uWXSEQAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/87_TET141_Dr.VINOTH_R.pdf",
+      "scholarName": "Dr. Vinoth R",
+      "scholarAffiliation": "Assistant Professor, Dept.of Computer Science & Engineering, SRM IST - Ramapuram Campus, Chennai",
+      "interests": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Deep Learning",
+        "Big Data",
+        "IoT & Cloud Computing"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 521,
+          "hIndex": 6,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 519,
+          "hIndex": 5,
+          "i10Index": 3
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "rajeshk2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "nagalakr1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sudhanm@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "surendau@srmist.edu.in",
+      "status": "review-needed",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=WAuV6JQAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/91_TET155_Dr.U.Surendar.pdf",
+      "scholarName": "Dr.U SURENDAR",
+      "scholarAffiliation": "Assistant Professor (Sr.Gr), Amrita Vishwa Vidyapeetham, Chennai",
+      "interests": [
+        "Microwave Antennas",
+        "Metamaterials",
+        "LTE",
+        "MIMO Antennas"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 97,
+          "hIndex": 5,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 85,
+          "hIndex": 5,
+          "i10Index": 3
+        }
+      },
+      "reason": "Scholar lists a different institution; identity requires review before research data is displayed."
+    },
+    {
+      "email": "nithishj@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "deepab@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "tamilset@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "beulakum@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "niveditv1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "madhua@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rajeshkr1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "hariharb1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "shrichag@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "snehaprm1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "srinarak@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sandhyaa@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "vaishnas1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "indumatg2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "swathir2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "mahavaiv@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "shamijar@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sachinab@srmist.edu",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "adleneep2@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=DdnCVxsAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/02/108_ADLENE_EBENEZER_P.docx.pdf",
+      "scholarName": "ADLENE EBENEZER P",
+      "scholarAffiliation": "Assistant Professor, SRM Institute of Science and Technology",
+      "interests": [
+        "Image Processing",
+        "Deep Learning",
+        "Satellite Image"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 58,
+          "hIndex": 3,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 58,
+          "hIndex": 3,
+          "i10Index": 3
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "malathip@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "revathys2@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=iKkDiN0AAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/112_TET269_Dr-Revathy.pdf",
+      "scholarName": "Revathy S",
+      "scholarAffiliation": "Assistant Professor, SRM Institute of Science and Technology",
+      "interests": [
+        "IoT",
+        "Machine learning",
+        "Security",
+        "Blockchain"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 73,
+          "hIndex": 4,
+          "i10Index": 2
+        },
+        "since2021": {
+          "citations": 73,
+          "hIndex": 4,
+          "i10Index": 2
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "sujeethr2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sasirekc@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "vaishnar5@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "nikithak@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "geethat@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=Z6yxFCYAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/117_TET298_Dr.-Geetha-T-V-Profile.docx.pdf",
+      "scholarName": "geetha tv1309",
+      "scholarAffiliation": "SRM Institute of Science and Technology",
+      "interests": [
+        "Cloud Computing",
+        "Networking"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 56,
+          "hIndex": 3,
+          "i10Index": 1
+        },
+        "since2021": {
+          "citations": 55,
+          "hIndex": 3,
+          "i10Index": 1
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "sahayasv2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "santhosc2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "geethac@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "nalinips@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "nancylis@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "devikam@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sowmiyac@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=Z87YaEAAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/124_TET313_Sowmiya-Sree-C.docx.pdf",
+      "scholarName": "Sowmiya Sree C",
+      "scholarAffiliation": "Assistant Professor, SRMIST",
+      "interests": [
+        "Networking"
+      ],
+      "metrics": null,
+      "reason": null
+    },
+    {
+      "email": "ramapram@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "harinib@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "chandras13@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "bharathr9@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rathisht@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "madhuril@srmist.edu.in",
+      "status": "unavailable",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=bwWWgE0AAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/130_TET345-Dr.L.Madhuridevi.docx.pdf",
+      "scholarName": null,
+      "scholarAffiliation": null,
+      "interests": [],
+      "metrics": null,
+      "reason": "The published Scholar link did not return a readable public profile."
+    },
+    {
+      "email": "arunkumr2@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "rajeswap3@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "snofydd@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=NACn5kIAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/133_TET363_Snofy-Dunston.docx.pdf",
+      "scholarName": "Snofy D Dunston",
+      "scholarAffiliation": "Anna University Chennai",
+      "interests": [
+        "Machine Learning",
+        "Biomedical data",
+        "Bio inspired Computing"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 87,
+          "hIndex": 6,
+          "i10Index": 4
+        },
+        "since2021": {
+          "citations": 87,
+          "hIndex": 6,
+          "i10Index": 4
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "saravanm16@srmist.edu.in",
+      "status": "review-needed",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=u3Hdhw4AAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/134_TET-366_Dr.-Saravanapriya-Manoharan.docx.pdf",
+      "scholarName": "Dr. Saravanapriya Manoharan",
+      "scholarAffiliation": "Founder and Director, Aarohana Institute of Advanced Technological Training and Research Excellence",
+      "interests": [
+        "Information Retrieval",
+        "Deep learning",
+        "Recommendation system",
+        "fuzzy logic",
+        "Machine learning"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 88,
+          "hIndex": 5,
+          "i10Index": 4
+        },
+        "since2021": {
+          "citations": 67,
+          "hIndex": 3,
+          "i10Index": 3
+        }
+      },
+      "reason": "Scholar lists a different institution; identity requires review before research data is displayed."
+    },
+    {
+      "email": "mohanm6@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=0Mg8nS8AAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/06/Dr-Mohan-M-_SRM.docx.pdf",
+      "scholarName": "Mohan M",
+      "scholarAffiliation": "Assistant Professor, SRM Institute of Science and Technology",
+      "interests": [
+        "cloud computing",
+        "machine learning",
+        "AI"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 106,
+          "hIndex": 5,
+          "i10Index": 3
+        },
+        "since2021": {
+          "citations": 80,
+          "hIndex": 3,
+          "i10Index": 3
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "lakshmir14@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "mageshnk@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=RZgwHvUAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/07/Dr.Mageshkumar-.-N_-Profile.docx.pdf",
+      "scholarName": "Mageshkumar Nagappan",
+      "scholarAffiliation": "SRM Institute of Science and Technology, Ramapuram",
+      "interests": [
+        "Bigdata",
+        "Network Security",
+        "Cloud Computing"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 162,
+          "hIndex": 5,
+          "i10Index": 4
+        },
+        "since2021": {
+          "citations": 161,
+          "hIndex": 5,
+          "i10Index": 4
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "sumathig1@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=O1hViCEAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/07/G.-Sumathi-Profile.docx.pdf",
+      "scholarName": "SUMATHI G",
+      "scholarAffiliation": "Assistant Professor, SRM Institute of Science and Technology, Ramapuram, Chennai",
+      "interests": [
+        "Computer vision",
+        "Deep learning",
+        "Machine learning"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 33,
+          "hIndex": 3,
+          "i10Index": 1
+        },
+        "since2021": {
+          "citations": 33,
+          "hIndex": 3,
+          "i10Index": 1
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "shanmugr2@srmist.edu.in",
+      "status": "review-needed",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=fnq71JYAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/139_TET407_R.-Shanmuga-Priya.docx.pdf",
+      "scholarName": "R. Shanmuga Priya",
+      "scholarAffiliation": "College of Engineering Guindy, Anna University.",
+      "interests": [
+        "Forest Fire",
+        "Natural Hazards",
+        "Remote Sensing",
+        "Image Processing",
+        "Deep Learning"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 658,
+          "hIndex": 9,
+          "i10Index": 9
+        },
+        "since2021": {
+          "citations": 617,
+          "hIndex": 9,
+          "i10Index": 9
+        }
+      },
+      "reason": "Scholar lists a different institution; identity requires review before research data is displayed."
+    },
+    {
+      "email": "poornir@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "daphnes@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "gowriv2@srmist.edu.in",
+      "status": "verified",
+      "checkedOn": "2026-10-08",
+      "profileUrl": "https://scholar.google.com/citations?user=sef3F7AAAAAJ&hl=en",
+      "identitySourceUrl": "https://srmrmp.edu.in/wp-content/uploads/2025/10/142_TET414_V.Gowri_.pdf",
+      "scholarName": "Gowri",
+      "scholarAffiliation": "SRM Institute of Science and Technology",
+      "interests": [
+        "Cloud computing and Fog computing"
+      ],
+      "metrics": {
+        "all": {
+          "citations": 41,
+          "hIndex": 4,
+          "i10Index": 2
+        },
+        "since2021": {
+          "citations": 41,
+          "hIndex": 4,
+          "i10Index": 2
+        }
+      },
+      "reason": null
+    },
+    {
+      "email": "shaamilg1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "jananeev@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "pcsarahp@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "muneeswv@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "deepikag1@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "banuprin@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "sureshp7@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "jeevithm5@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    },
+    {
+      "email": "kannammn@srmist.edu.in",
+      "status": "pending",
+      "checkedOn": "2026-10-08",
+      "reason": "No unambiguous Google Scholar profile link could be retrieved from the official faculty sources."
+    }
+  ]
+}

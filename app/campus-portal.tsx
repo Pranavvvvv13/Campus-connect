@@ -5,6 +5,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { normalizeCity, matchesLocation } from "@/lib/event-location";
 import { eventDate, type HackathonFeed } from "@/lib/hackathons";
 import facultyDirectory from "@/lib/faculty-data.json";
+import { researchSearchText, verifiedResearchCount } from "@/lib/faculty-research";
+import { FacultyResearchInfo } from "./faculty-research-info";
 import UserPage from "@/components/user-page";
 import AdminDashboard from "@/components/admin-dashboard";
 import StudentDirectory from "@/components/student-directory";
@@ -172,7 +174,7 @@ function Portal({ viewer, assignedRole, onSignOut, theme, toggleTheme }: { viewe
     </nav>}
     <div className="portal-shell">
       <main className="main-area">
-        <header className="topbar"><div className="window-controls" aria-hidden="true"><i /><i /><i /></div><span className="portal-wordmark"><GraduationCap size={21}/><strong>CampusConnect</strong></span><span className="breadcrumb">Workspace <ChevronRight size={12} /> {section === "settings" ? "User settings" : section === "user" ? "User profile" : navigation.find(item => item.id === section)?.label}</span><div className="top-actions"><ThemeToggle theme={theme} toggleTheme={toggleTheme} /><button className="avatar small avatar-button" onClick={() => go("user")} aria-label="Open user profile">{initials}</button></div></header>
+        <header className="topbar"><div className="window-controls" aria-hidden="true"><i /><i /><i /></div><span className="portal-wordmark"><GraduationCap size={21}/><strong>CampusConnect</strong></span><span className="breadcrumb">Workspace <ChevronRight size={12} /> {section === "settings" ? "User settings" : section === "user" ? "User profile" : navigation.find(item => item.id === section)?.label}</span><div className="top-actions"><ThemeToggle theme={theme} toggleTheme={toggleTheme} /></div></header>
         <div className="page-content" ref={contentRef}>
           {role === "Student" && <DeadlineReminders saved={currentSaved} now={now} onOpen={()=>go("saved")}/>}
           {section !== "settings" && section !== "user" && <label className="global-search"><Search size={17} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder={section === "admin" ? "Search accounts or audit activity" : section === "students" || (section === "dashboard" && (role === "Faculty" || role === "Admin")) ? "Search students by name, ID, skills or projects" : section === "hackathons" ? "Search hackathons, cities and organisers" : section === "dashboard" ? "Search faculty, departments, clubs and hackathons" : "Search people, clubs and opportunities"} aria-label="Search portal" /><kbd>⌕</kbd></label>}
@@ -199,7 +201,7 @@ function StudentSearch({query,live,onClear}:{query:string;live:ReturnType<typeof
   const [category,setCategory]=useState("All");
   const terms=query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const matches=(values:string[])=>terms.every(term=>values.join(" ").toLowerCase().includes(term));
-  const faculty=facultyData.filter(person=>matches([person.name,person.department,person.designation,person.qualification,person.email]));
+  const faculty=facultyData.filter(person=>matches([person.name,person.department,person.designation,person.qualification,person.email,researchSearchText(person.email)]));
   const clubs=clubData.filter(club=>matches([club.name,...club.domains,club.president,club.vicePresident,club.secretary]));
   const events=(live.feed?.events??[]).filter(event=>matches([event.title,event.host,event.location??"",...event.tags]));
   const count=(category==="All"||category==="Faculty"?faculty.length:0)+(category==="All"||category==="Clubs"?clubs.length:0)+(category==="All"||category==="Hackathons"?events.length:0);
@@ -263,13 +265,13 @@ function Faculty({ query = "" }: { query?: string }) {
   const search = query.trim().toLowerCase();
   const people = facultyData.filter(person =>
     (department === "All" || person.department === department) &&
-    [person.name, person.designation, person.department, person.qualification, person.email].join(" ").toLowerCase().includes(search)
+    [person.name, person.designation, person.department, person.qualification, person.email, researchSearchText(person.email)].join(" ").toLowerCase().includes(search)
   );
   return <>
     <PageHeading eyebrow="Knowledge network" title="Faculty research"
-      copy={`${facultyData.length} faculty from SRM Ramapuram’s official directory. Explore their qualifications and linked faculty profiles.`}
+      copy={`${facultyData.length} faculty from SRM Ramapuram’s official directory. Explore research interests, citation metrics and publications on Google Scholar.`}
       action={<a className="secondary-button" href={facultyDirectory.sourceUrl} target="_blank" rel="noreferrer">Official directory <ExternalLink size={16} /></a>} />
-    <p className="faculty-source-note">Imported on 28 September 2026 · Use the search above to find faculty by name, department or email.</p>
+    <p className="faculty-source-note">{verifiedResearchCount} of {facultyData.length} Scholar profiles verified · Research snapshot: 8 October 2026 · Remaining profiles pending verification or access. Search by name, department, email or research interest.</p>
     <div className="filter-row" aria-label="Filter faculty by department">{departments.map(item =>
       <button key={item} className={department === item ? "filter-chip active" : "filter-chip"} aria-pressed={department === item} onClick={() => setDepartment(item)}>{item}</button>
     )}</div>
@@ -284,6 +286,7 @@ function Faculty({ query = "" }: { query?: string }) {
           <h2>{person.name}</h2><p>{person.designation}</p>
           <dl className="faculty-details"><div><dt>Department</dt><dd>{person.department}</dd></div><div><dt>Qualification</dt><dd>{person.qualification}</dd></div></dl>
           <a className="faculty-email" href={`mailto:${person.email}`}><Mail size={14} /><span>{person.email}</span></a>
+          <FacultyResearchInfo email={person.email} />
           {person.profileUrl ? <a className="secondary-button full" href={person.profileUrl} target="_blank" rel="noreferrer">View faculty profile <ExternalLink size={15} /></a> : <span className="faculty-profile-unavailable">Profile not linked in the directory</span>}
         </div>
       </article>;
@@ -291,5 +294,3 @@ function Faculty({ query = "" }: { query?: string }) {
     {people.length === 0 && <div className="empty-clubs"><Search size={22} /><strong>No faculty match your search</strong><span>Try another name or department, or clear the search.</span></div>}
   </>;
 }
-
-

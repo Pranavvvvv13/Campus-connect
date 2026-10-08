@@ -67,7 +67,10 @@
 .theme-root .rail-button.active { color: var(--ink); background: var(--pill); }
 .theme-root .login-panel { background: var(--window-surface); }
 .theme-root .portal-option { color: var(--ink); background: var(--surface); }
-.theme-root .login-fields input { color: var(--ink); }
+.theme-root .login-fields input { color: var(--ink); border: 0 !important; outline: none !important; box-shadow: none !important; }
+.theme-root .login-fields input:focus, .theme-root .login-fields input:focus-visible { outline: none !important; box-shadow: none !important; }
+.theme-root .login-fields label > div { transition: border-color .15s ease, box-shadow .15s ease; }
+.theme-root .login-fields label > div:focus-within { border-color: var(--accent) !important; box-shadow: 0 0 0 3px var(--accent-soft) !important; }
 .theme-root .location-filter select, .theme-root .sort-control select, .theme-root .portfolio-editor input, .theme-root .portfolio-editor textarea { background: var(--canvas); }
 @media (max-width: 1050px) { .spatial-dashboard { grid-template-columns: 1fr 1fr; } .spatial-dashboard .metric-grid { grid-column: 1 / -1; grid-row: auto; grid-template-columns: repeat(3, 1fr); } .spatial-dashboard .opportunity-panel { grid-column: 1 / -1; } }
 @media (max-width: 850px) { .spatial-scene { padding: 16px 16px 88px; } .theme-root .portal-shell { min-height: 0; height: calc(100dvh - 104px); } }

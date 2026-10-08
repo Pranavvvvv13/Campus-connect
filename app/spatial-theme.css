@@ -121,8 +121,11 @@
 .portal-option:hover { background: var(--pill); transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0, 0, 0, .07), inset 0 1px 0 var(--line-strong); }
 .portal-icon { background: var(--pill); color: var(--ink); border: 1px solid var(--line); }
 .login-fields label > div { background: var(--surface); border-radius: 14px; height: 48px; }
-.login-fields input { color: var(--ink); }
-button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.login-fields input { color: var(--ink); border: 0; outline: none; }
+.login-fields input:focus, .login-fields input:focus-visible { outline: none; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.login-fields input:focus-visible { outline: none; }
 @media (min-width: 851px) and (max-height: 720px) { .spatial-scene { padding-top: 22px; padding-bottom: 82px; } .portal-shell { min-height: 0; height: calc(100dvh - 104px); } .spatial-dock { bottom: 12px; } }
 @media (max-width: 1050px) { .hero-orbits { width: 180px; height: 180px; margin-right: 0; } .orbit-core { inset: 58px; } .welcome-panel { padding: 25px; } }
 @media (max-width: 850px) { .spatial-scene { padding: 18px; } .portal-shell { height: calc(100dvh - 36px); min-height: 0; } .spatial-rail, .spatial-dock { display: none; } .topbar { padding-inline: 20px; } .page-content { padding: 22px; } }
