@@ -346,3 +346,28 @@
  .theme-root .welcome-panel h1 { font-size:34px; }
  .theme-root .metric-card strong { font-size:34px; }
 }
+/* Keep navigation and workspace in separate columns instead of viewport offsets. */
+@media(min-width:851px) {
+ .theme-root .spatial-scene:has(.spatial-rail) {
+  display:grid;
+  grid-template-columns:54px minmax(0,1440px);
+  justify-content:center;
+  align-items:center;
+  gap:24px;
+  padding:24px 28px;
+ }
+ .theme-root .spatial-scene>.spatial-rail {
+  position:relative;
+  inset:auto;
+  transform:none;
+  width:54px;
+  max-height:calc(100dvh - 48px);
+  overflow-y:auto;
+  scrollbar-width:thin;
+ }
+ .theme-root .spatial-scene:has(.spatial-rail)>.portal-shell {
+  width:100%;
+  min-width:0;
+  margin:0;
+ }
+}
