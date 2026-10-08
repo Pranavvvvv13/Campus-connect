@@ -2,7 +2,7 @@ export type Hackathon = {
   id: string;
   title: string;
   host: string;
-  source: "Devfolio" | "Unstop";
+  source: "Devfolio" | "Unstop" | "LinkedIn";
   href: string;
   mode: "Online" | "Offline" | "Hybrid";
   location: string | null;
@@ -15,6 +15,7 @@ export type Hackathon = {
   description?: string;
   eligibility?: string;
   registrationOpensAt?: string | null;
+  syncKind?: "automatic" | "manual";
 };
 
 export function registrationStatus(event: Hackathon, now: number) {
@@ -30,7 +31,7 @@ export function registrationStatus(event: Hackathon, now: number) {
 export type HackathonFeed = {
   events: Hackathon[];
   fetchedAt: string;
-  providers: { name: Hackathon["source"]; status: "ok" | "unavailable"; count: number }[];
+  providers: { name: Hackathon["source"]; status: "ok" | "unavailable" | "not_configured"; count: number; message?: string }[];
 };
 
 export function eventDate(value: string | null) {

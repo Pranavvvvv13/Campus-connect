@@ -29,10 +29,10 @@ export default function HackathonCard({event,index,now,bookmarks,allowSaving}:{e
     <div ref={artworkRef} className={`event-art art-${index%4} ${hasImage?"provider-art":""} ${isLogo?"provider-logo colourful-cover":""}`}>
       {hasImage ? /* Provider images are already validated remote URLs; retain the native fallback on failure. */
         /* eslint-disable-next-line @next/next/no-img-element */
-        <><img src={imageUrl!} alt={`${event.title} ${isLogo?"logo":"banner"}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={()=>setFailedUrl(imageUrl??"")}/>{isLogo&&<div className="cover-title"><small>{event.source} · Hackathon</small><strong>{event.title}</strong></div>}</>
+        <><img src={imageUrl!} alt={`${event.title} ${isLogo?"logo":"banner"}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={()=>setFailedUrl(imageUrl??"")}/>{isLogo&&<div className="cover-title"><small>{event.source} · {event.source==="LinkedIn"?"Event":"Hackathon"}</small><strong>{event.title}</strong></div>}</>
         : <><span>{event.source}</span><Trophy size={47} strokeWidth={1}/><small>{event.tags[0]??"Build. Learn. Connect."}</small></>}
     </div>
-    <div className="event-body"><div className="event-top"><span className="source-badge">{event.source}</span><span className="event-mode">{event.mode==="Online"?<Wifi size={12}/>:<MapPin size={12}/>} {event.mode}</span></div>
+    <div className="event-body"><div className="event-top"><span className="source-badge">{event.source}{event.syncKind==="manual"?" · Manual entry":""}</span><span className="event-mode">{event.mode==="Online"?<Wifi size={12}/>:<MapPin size={12}/>} {event.mode}</span></div>
       <span className={`registration-status ${closed?"registration-closed":status==="Closing soon"?"registration-soon":""}`}>{status}</span>
       <h2>{event.title}</h2><p>{event.host}</p><p className="event-location"><MapPin size={13}/>{event.mode==="Online"?"Online · join anywhere":event.location||"Venue not listed · check event page"}</p>
       <div className="tag-row">{event.tags.slice(0,3).map(tag=><span key={tag}>{tag}</span>)}</div>

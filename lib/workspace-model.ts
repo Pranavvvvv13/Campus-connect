@@ -15,14 +15,15 @@ export const profileSchema = z.object({
 });
 export type Profile = z.infer<typeof profileSchema>;
 export const eventSchema = z.object({
-  id: z.string().max(100), title: z.string().min(1).max(500), host: z.string().max(500), source: z.enum(["Devfolio", "Unstop"]),
+  id: z.string().max(100), title: z.string().min(1).max(500), host: z.string().max(500), source: z.enum(["Devfolio", "Unstop", "LinkedIn"]),
   href: z.string().url().max(1000).transform(value=>new URL(value).href), mode: z.enum(["Online", "Offline", "Hybrid"]), location: z.string().max(200).nullable(),
   startsAt: z.string().max(100).nullable(), endsAt: z.string().max(100).nullable(), deadline: z.string().max(100).nullable(), tags: z.array(z.string().max(200)).max(30),
   imageUrl: z.string().url().max(2000).refine(value=>value.startsWith("https://")).nullable().optional(), imageKind:z.enum(["banner","logo"]).optional(),
   description:z.string().max(2000).optional(), eligibility:z.string().max(500).optional(), registrationOpensAt:z.string().max(100).nullable().optional(),
+  syncKind:z.enum(["automatic","manual"]).optional(),
 }).refine(event => {
   const url = new URL(event.href);
-  return url.protocol === "https:" && (event.source === "Devfolio" ? url.hostname.endsWith(".devfolio.co") : url.hostname === "unstop.com");
+  return url.protocol === "https:" && (event.source === "Devfolio" ? url.hostname.endsWith(".devfolio.co") : event.source === "LinkedIn" ? ["www.linkedin.com","linkedin.com"].includes(url.hostname) && /^\/events\//.test(url.pathname) : url.hostname === "unstop.com");
 }, "Event link must belong to its provider.");
 export type SavedHackathon = { event: Hackathon; reminderDays: number; savedAt: string };
 export type TeamMember = { id: string; name: string; role: string; headline: string; skills: string; city: string; interests: string; lookingFor: string; github: string; website: string };

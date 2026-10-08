@@ -19,7 +19,8 @@ export async function POST(request: Request) {
       db.prepare("DELETE FROM workspace_sessions WHERE expires_at<=? OR token_hash=?").bind(Date.now(), await tokenHash(oldToken)),
       db.prepare("INSERT INTO workspace_sessions(token_hash,account_id,expires_at) VALUES(?,?,?)").bind(await tokenHash(token), account.universityId, Date.now() + 7 * 86400000),
     ]);
-    return Response.json({ account }, { headers: { "Cache-Control": "no-store", "Set-Cookie": `campus_session=${token}; HttpOnly; SameSite=Lax; Path=/; Max-Age=604800${url.protocol === "https:" ? "; Secure" : ""}` } });
+    const preferences=await db.prepare("SELECT display_name FROM workspace_user_preferences WHERE account_id=?").bind(account.universityId).first<{display_name:string}>();
+    return Response.json({ account:{...account,name:preferences?.display_name||account.name} }, { headers: { "Cache-Control": "no-store", "Set-Cookie": `campus_session=${token}; HttpOnly; SameSite=Lax; Path=/; Max-Age=604800${url.protocol === "https:" ? "; Secure" : ""}` } });
   });
 }
 export async function DELETE(request: Request) { return api(async () => {

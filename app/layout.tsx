@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./spatial.css";
 import "./spatial-theme.css";
-import "./vision-workspace.css";
+import "./spatial-workspace.css";
 
 export const metadata: Metadata = {
   title: "CampusConnect | University Portal",

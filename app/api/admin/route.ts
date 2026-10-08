@@ -14,7 +14,10 @@ export async function GET(request:Request){return api(async()=>{
     db.prepare("SELECT COUNT(*) AS count FROM workspace_bookmarks").first<{count:number}>(),
     db.prepare("SELECT COUNT(*) AS count FROM workspace_team_requests WHERE status='pending'").first<{count:number}>(),
   ]);
-  const accounts=Object.values(demoDirectory).map(person=>{
+  const preferences=await db.prepare("SELECT account_id,display_name FROM workspace_user_preferences").all<{account_id:string;display_name:string}>();
+  const displayNames=new Map(preferences.results.map(row=>[row.account_id,row.display_name]));
+  const accounts=Object.values(demoDirectory).map(original=>{
+    const person={...original,name:displayNames.get(original.universityId)||original.name};
     const row=profiles.results.find(row=>row.account_id===person.universityId);
     const profile=row?profileSchema.safeParse(JSON.parse(row.profile_json)):null;
     return {id:person.universityId,name:person.name,email:person.email,role:person.role,suspended:Boolean(statuses.results.find(row=>row.account_id===person.universityId)?.suspended),sessions:sessions.results.find(row=>row.account_id===person.universityId)?.count??0,portfolioUpdatedAt:row?.updated_at??null,sharedWithFaculty:profile?.success?profile.data.facultyVisible:false,projects:profile?.success?profile.data.projects.length:0,achievements:profile?.success?profile.data.achievements.length:0};

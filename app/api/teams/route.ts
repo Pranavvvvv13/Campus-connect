@@ -5,13 +5,15 @@ import { api, ApiError, json, jsonBody, requireAccount, requireSameOrigin, works
 export const dynamic = "force-dynamic";
 export async function GET(request: Request) { return api(async () => {
   const account = await requireAccount(request); const db = await workspaceDb();
+  const preferences=await db.prepare("SELECT account_id,display_name FROM workspace_user_preferences").all<{account_id:string;display_name:string}>();
+  const displayNames=new Map(preferences.results.map(row=>[row.account_id,row.display_name]));
   const profiles = await db.prepare("SELECT account_id,profile_json FROM workspace_profiles").all<{account_id:string;profile_json:string}>();
   const members = profiles.results.flatMap(row => {
     const profile: Profile = JSON.parse(row.profile_json); const person = demoDirectory[row.account_id];
-    return profile.teamVisible && person ? [{ id:row.account_id,name:person.name,role:person.role,headline:profile.headline,skills:profile.skills,city:profile.city,interests:profile.interests,lookingFor:profile.lookingFor,github:profile.github,website:profile.website }] : [];
+    return profile.teamVisible && person ? [{ id:row.account_id,name:displayNames.get(row.account_id)||person.name,role:person.role,headline:profile.headline,skills:profile.skills,city:profile.city,interests:profile.interests,lookingFor:profile.lookingFor,github:profile.github,website:profile.website }] : [];
   });
   const rows = await db.prepare("SELECT * FROM workspace_team_requests WHERE from_id=? OR to_id=? ORDER BY created_at DESC").bind(account.universityId,account.universityId).all<{id:string;from_id:string;to_id:string;status:string;created_at:string}>();
-  return json({ members, accountId:account.universityId, requests: rows.results.map(row => ({id:row.id,fromId:row.from_id,toId:row.to_id,fromName:demoDirectory[row.from_id]?.name ?? "Campus member",toName:demoDirectory[row.to_id]?.name ?? "Campus member",status:row.status,createdAt:row.created_at})) });
+  return json({ members, accountId:account.universityId, requests: rows.results.map(row => ({id:row.id,fromId:row.from_id,toId:row.to_id,fromName:displayNames.get(row.from_id)||demoDirectory[row.from_id]?.name||"Campus member",toName:displayNames.get(row.to_id)||demoDirectory[row.to_id]?.name||"Campus member",status:row.status,createdAt:row.created_at})) });
 }); }
 export async function POST(request: Request) { return api(async () => {
   requireSameOrigin(request); const account = await requireAccount(request);
