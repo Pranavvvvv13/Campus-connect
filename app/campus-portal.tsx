@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { normalizeCity, matchesLocation } from "@/lib/event-location";
 import { eventDate, type HackathonFeed } from "@/lib/hackathons";
 import facultyDirectory from "@/lib/faculty-data.json";
-import { researchSearchText, verifiedResearchCount } from "@/lib/faculty-research";
+import { researchSearchText, verifiedResearchCount, researchRetrievedOn } from "@/lib/faculty-research";
 import { FacultyResearchInfo } from "./faculty-research-info";
 import UserPage from "@/components/user-page";
 import AdminDashboard from "@/components/admin-dashboard";
@@ -271,7 +271,7 @@ function Faculty({ query = "" }: { query?: string }) {
     <PageHeading eyebrow="Knowledge network" title="Faculty research"
       copy={`${facultyData.length} faculty from SRM Ramapuram’s official directory. Explore research interests, citation metrics and publications on Google Scholar.`}
       action={<a className="secondary-button" href={facultyDirectory.sourceUrl} target="_blank" rel="noreferrer">Official directory <ExternalLink size={16} /></a>} />
-    <p className="faculty-source-note">{verifiedResearchCount} of {facultyData.length} Scholar profiles verified · Research snapshot: 8 October 2026 · Remaining profiles pending verification or access. Search by name, department, email or research interest.</p>
+    <p className="faculty-source-note">{verifiedResearchCount} of {facultyData.length} Scholar profiles verified · Latest import: {researchRetrievedOn} · Individual verification dates appear on each profile. Faculty without verified Scholar details show officially published LinkedIn links where available. Search by name, department, email or research interest.</p>
     <div className="filter-row" aria-label="Filter faculty by department">{departments.map(item =>
       <button key={item} className={department === item ? "filter-chip active" : "filter-chip"} aria-pressed={department === item} onClick={() => setDepartment(item)}>{item}</button>
     )}</div>

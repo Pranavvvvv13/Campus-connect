@@ -1,13 +1,21 @@
 import { ExternalLink } from "lucide-react";
 import { facultyResearch } from "@/lib/faculty-research";
+import linkedinSnapshot from "@/lib/faculty-linkedin.json";
 import "./faculty-research.css";
 
 export function FacultyResearchInfo({ email }: { email: string }) {
   const record = facultyResearch.get(email);
   if (!record || record.status !== "verified") {
-    const label = record?.status === "review-needed" ? "Scholar identity needs review"
-      : record?.status === "unavailable" ? "Scholar profile unavailable" : "Scholar profile pending verification";
-    return <div className="faculty-research-info"><p className="faculty-profile-unavailable" title={record?.reason ?? undefined}>{label}</p></div>;
+    const linkedin = linkedinSnapshot.faculty.find(person => person.email === email);
+    const available = linkedin?.status === "officially-published" && linkedin.profileUrl;
+    return <section className="faculty-research-info" aria-label="Faculty professional profile">
+      <h3>Professional profile</h3>
+      {available ? <>
+        <a className="secondary-button full" href={linkedin.profileUrl!} target="_blank" rel="noreferrer">View LinkedIn profile <ExternalLink size={15}/></a>
+        <p className="faculty-research-date">LinkedIn link published by SRM · Checked {linkedin.checkedOn}</p>
+      </> : <p className="faculty-profile-unavailable">LinkedIn profile not available</p>}
+      {linkedin?.identitySourceUrl && <p className="faculty-research-date"><a href={linkedin.identitySourceUrl} target="_blank" rel="noreferrer">Official faculty profile</a></p>}
+    </section>;
   }
   return <section className="faculty-research-info" aria-label="Google Scholar research">
     <h3>Research interests</h3>
@@ -22,6 +30,6 @@ export function FacultyResearchInfo({ email }: { email: string }) {
       <p className="faculty-research-date">All time · Since 2021: {record.metrics.since2021.citations.toLocaleString("en-IN")} citations, h-index {record.metrics.since2021.hIndex}, i10-index {record.metrics.since2021.i10Index}</p>
     </> : <p className="faculty-profile-unavailable">Citation metrics not listed on Scholar</p>}
     <a className="secondary-button full" href={record.profileUrl ?? undefined} target="_blank" rel="noreferrer">Publications on Google Scholar <ExternalLink size={15} /></a>
-    <p className="faculty-research-date">Checked 8 October 2026{record.identitySourceUrl && <> · <a href={record.identitySourceUrl} target="_blank" rel="noreferrer">Identity source</a></>}</p>
+    <p className="faculty-research-date">Checked {new Intl.DateTimeFormat("en-IN",{day:"numeric",month:"long",year:"numeric",timeZone:"Asia/Kolkata"}).format(new Date(record.checkedOn+"T00:00:00Z"))}{record.identitySourceUrl && <> · <a href={record.identitySourceUrl} target="_blank" rel="noreferrer">Identity source</a></>}</p>
   </section>;
 }

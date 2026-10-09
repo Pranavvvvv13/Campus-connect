@@ -374,3 +374,10 @@
   margin:0;
  }
 }
+/* All interface text is black in light mode, including secondary labels. */
+.theme-root.theme-light { --ink:#000; --muted-ink:#000; }
+.theme-root.theme-light,.theme-root.theme-light * { color:#000 !important; -webkit-text-fill-color:#000; }
+.theme-root.theme-light :is(p,small,span,label,dt,dd,a,button,h1,h2,h3,h4,input,textarea,select) { opacity:1; }
+.theme-root.theme-light input::placeholder,.theme-root.theme-light textarea::placeholder { color:#000; opacity:1; -webkit-text-fill-color:#000; }
+.theme-root.theme-light .spatial-dashboard .welcome-panel { background:linear-gradient(112deg,#dcc9f3,#c3a2ed 58%,#dbaaff); }
+.theme-root.theme-light :is(.primary-button,.welcome-panel .primary-button,.rail-button.active,.filter-chip.active,.welcome-badge) { background:linear-gradient(135deg,#e9d6ff,#c5a7ec); }
