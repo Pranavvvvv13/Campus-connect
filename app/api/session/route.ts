@@ -10,14 +10,14 @@ export async function POST(request: Request) {
     const url = new URL(request.url);
     const body = await jsonBody(request);
     const local = import.meta.env.DEV && ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname);
-    const hostedDemo = await demoLoginConfig();
+    const email = String(body.email ?? "").trim().toLowerCase();
+    const account = Object.values(demoDirectory).find(person => person.email.toLowerCase() === email);
+    const hostedDemo = await demoLoginConfig(account?.role ?? "");
     if (!local && !hostedDemo.enabled) throw new ApiError(403, "Teacher demo access needs to be enabled by the site owner.");
     const captcha = await turnstileConfig(local);
     if (!await verifyTurnstile(body.captchaToken, captcha.secret, url.hostname, captcha.testMode)) throw new ApiError(400, "CAPTCHA verification failed or expired. Please complete it again.");
-    const email = String(body.email ?? "").trim().toLowerCase();
-    const account = Object.values(demoDirectory).find(person => person.email.toLowerCase() === email);
     const passwordLogin = typeof body.password === "string";
-    if (!local && (!passwordLogin || account?.universityId !== "STU-2026-001")) throw new ApiError(401, "Use the student demo account shared by the project owner.");
+    if (!local && !passwordLogin) throw new ApiError(401, "Use the demo email and password shared by the project owner.");
     if (!account || account.role !== body.role || (passwordLogin ? body.password !== (local ? "123" : hostedDemo.password) : body.code !== "246810" || account.universityId !== String(body.universityId ?? "").trim().toUpperCase())) throw new ApiError(401, "The email or password is incorrect for this portal.");
     const db = await workspaceDb();
     const status=await db.prepare("SELECT suspended FROM workspace_account_status WHERE account_id=?").bind(account.universityId).first<{suspended:number}>();
