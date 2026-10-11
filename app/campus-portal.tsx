@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, ArrowUpRight, Bookmark, Settings, RefreshCw, MapPin, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, ExternalLink, GraduationCap, IdCard, KeyRound, LayoutDashboard, LogOut, Mail, Microscope, Moon, Search, ShieldCheck, Sparkles, Sun, Trophy, UsersRound, UserRound } from "lucide-react";
+import { Award, ArrowUpRight, Bookmark, Settings, RefreshCw, MapPin, BookOpen, CheckCircle2, ChevronLeft, ChevronRight, ExternalLink, GraduationCap, KeyRound, LayoutDashboard, LogOut, Mail, Microscope, Moon, Search, ShieldCheck, Sparkles, Sun, Trophy, UsersRound, UserRound } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { normalizeCity, matchesLocation } from "@/lib/event-location";
 import { eventDate, type HackathonFeed } from "@/lib/hackathons";
@@ -8,9 +8,10 @@ import facultyDirectory from "@/lib/faculty-data.json";
 import { researchSearchText, verifiedResearchCount, researchRetrievedOn } from "@/lib/faculty-research";
 import { FacultyResearchInfo } from "./faculty-research-info";
 import UserPage from "@/components/user-page";
+import LoginCaptcha from "@/components/login-captcha";
 import AdminDashboard from "@/components/admin-dashboard";
 import StudentDirectory from "@/components/student-directory";
-import { demoDirectory, type Role, type DemoSession } from "@/lib/demo-accounts";
+import { type Role, type DemoSession } from "@/lib/demo-accounts";
 import { workspaceRequest } from "@/lib/workspace-client";
 import { useBookmarks } from "@/hooks/use-bookmarks";
 import HackathonCard from "@/components/hackathon-card";
@@ -89,28 +90,31 @@ function ThemeToggle({ theme, toggleTheme }: { theme: "light" | "dark"; toggleTh
 }
 
 function LoginScreen({ onAuthenticated, theme, toggleTheme }: { onAuthenticated: (session: DemoSession) => void; theme: "light" | "dark"; toggleTheme: () => void }) {
-  const [portal, setPortal] = useState<Role | null>(null);
-  const [step, setStep] = useState<"credentials" | "verify">("credentials");
-  const [universityId, setUniversityId] = useState("");
-  const [email, setEmail] = useState("");
-  const [otp, setOtp] = useState("");
-  const [error, setError] = useState("");
-  const [busy, setBusy] = useState(false);
-  const profiles = [
-    { role: "Student" as Role, icon: GraduationCap, title: "Student portal", copy: "Portfolio, achievements, clubs and opportunities.", id: "STU-2026-001" },
-    { role: "Faculty" as Role, icon: Microscope, title: "Faculty portal", copy: "Research portfolio and student verification.", id: "FAC-2026-001" },
-    { role: "Admin" as Role, icon: ShieldCheck, title: "Admin portal", copy: "Restricted approvals, access and audit controls.", id: "ADM-2026-001" },
-  ];
-  const selectPortal = (role: Role, id: string) => { const account = demoDirectory[id]; setPortal(role); setUniversityId(id); setEmail(account.email); setStep("credentials"); setOtp(""); setError(""); };
-  const continueLogin = () => { const account = demoDirectory[universityId.trim().toUpperCase()]; if (!account || account.email.toLowerCase() !== email.trim().toLowerCase()) { setError("We could not verify those university details."); return; } if (account.role !== portal) { setError(`This account is assigned to the ${account.role} portal.`); return; } setError(""); setStep("verify"); };
-  const verify = async () => {
-    if (busy) return;
-    setBusy(true); setError("");
-    try { const data = await workspaceRequest<{account:DemoSession}>("/api/session", {method:"POST",body:JSON.stringify({universityId,email,role:portal,code:otp})}); onAuthenticated(data.account); }
-    catch (failure) { setError(failure instanceof Error ? failure.message : "Could not sign in."); }
-    finally { setBusy(false); }
-  };
-  return <main className="login-shell"><div className="login-orb orb-one"/><div className="login-orb orb-two"/><section className="login-panel"><div className="login-brand"><span><GraduationCap size={24}/></span><div><strong>CampusConnect</strong><small>Secure university portal</small></div><ThemeToggle theme={theme} toggleTheme={toggleTheme}/></div>{!portal ? <><div className="login-heading"><span className="security-pill"><ShieldCheck size={14}/> Protected university access</span><h1>Choose your portal</h1><p>Your role is verified against the university directory after sign-in.</p></div><div className="portal-options">{profiles.map(({ role, icon: Icon, title, copy, id }) => <button key={role} className="portal-option" onClick={() => selectPortal(role,id)}><span className={`portal-icon ${role.toLowerCase()}`}><Icon size={23}/></span><span><strong>{title}</strong><small>{copy}</small></span><ChevronRight size={19}/></button>)}</div><p className="login-help">First-time user? Your account must already exist in the official university roster.</p></> : <div className="login-form-wrap"><button className="back-login" onClick={() => setPortal(null)}><ChevronLeft size={16}/> All portals</button><span className={`portal-icon ${portal.toLowerCase()}`}>{portal === "Student" ? <GraduationCap size={23}/> : portal === "Faculty" ? <Microscope size={23}/> : <ShieldCheck size={23}/>}</span><h1>{portal} sign in</h1><p>{step === "credentials" ? "Use your verified university account." : `We sent a demo verification code to ${email}.`}</p>{step === "credentials" ? <div className="login-fields"><label><span>University ID</span><div><IdCard size={17}/><input value={universityId} onChange={e=>setUniversityId(e.target.value)} autoComplete="username"/></div></label><label><span>University email</span><div><Mail size={17}/><input type="email" value={email} onChange={e=>setEmail(e.target.value)} autoComplete="email"/></div></label><button className="primary-button full login-submit" onClick={continueLogin}>Continue securely <ChevronRight size={16}/></button></div> : <div className="login-fields"><label><span>Six-digit verification code</span><div><KeyRound size={17}/><input inputMode="numeric" maxLength={6} value={otp} onChange={e=>setOtp(e.target.value.replace(/\D/g,""))} placeholder="246810" autoComplete="one-time-code"/></div></label><button className="primary-button full login-submit" disabled={busy} onClick={() => void verify()}>{busy ? "Signing in…" : "Verify and open workspace"}</button><button className="secondary-button full" onClick={()=>{setStep("credentials");setError("")}}>Change account</button></div>}{error && <p className="login-error" role="alert">{error}</p>}<div className="demo-notice"><strong>Local demo access</strong><span>Verification code: <code>246810</code>. Replace this adapter with university SSO before any real deployment.</span></div></div>}<footer className="login-footer"><span>Privacy</span><span>Security</span><span>IT support</span></footer></section></main>;
+ const [portal,setPortal]=useState<Role>("Student");
+ const [email,setEmail]=useState("");
+ const [password,setPassword]=useState("");
+ const [captchaToken,setCaptchaToken]=useState("");
+ const [captchaAttempt,setCaptchaAttempt]=useState(0);
+ const [error,setError]=useState("");
+ const [busy,setBusy]=useState(false);
+ async function login(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault(); if(busy)return;
+  if(!captchaToken){setError("Please complete the CAPTCHA first.");return;}
+  setBusy(true);setError("");
+  const address=email.trim().includes("@")?email.trim():email.trim()+"@srmist.edu.in";
+  try {const data=await workspaceRequest<{account:DemoSession}>("/api/session",{method:"POST",body:JSON.stringify({email:address,password,role:portal,captchaToken})});onAuthenticated(data.account);}
+  catch(failure){setError(failure instanceof Error?failure.message:"Could not sign in.");setCaptchaToken("");setCaptchaAttempt(value=>value+1);}finally{setBusy(false);}
+ }
+ return <main className="login-shell"><section className="login-panel college-login">
+ <div className="login-brand"><span><GraduationCap size={24}/></span><div><strong>CampusConnect</strong><small>Campus community portal</small></div><ThemeToggle theme={theme} toggleTheme={toggleTheme}/></div>
+ <div className="college-login-grid"><div className="college-login-welcome"><h2>Dear {portal},</h2><p>Welcome to CampusConnect.</p><p>Explore opportunities, faculty research, student portfolios and campus communities.</p><p>Use your college email ID or NetID and your CampusConnect password to sign in.</p><div className="demo-notice"><strong>CampusConnect · Teacher preview</strong><span>Sign in using the demo credentials shared by the project owner. This independent project does not use your SRM email password.</span></div></div>
+ <div className="college-login-card"><h1>{portal} Portal</h1><form className="login-fields" onSubmit={event=>void login(event)}>
+ <label><span>Portal</span><select aria-label="Portal" value={portal} onChange={event=>{setPortal(event.target.value as Role);setPassword("");setError("");}}>{(["Student","Faculty","Admin"] as const).map(role=><option key={role}>{role}</option>)}</select></label>
+ <label><span>College email ID / NetID</span><div><Mail size={18}/><input required value={email} onChange={event=>setEmail(event.target.value)} placeholder="pk9261@srmist.edu.in" autoComplete="username" autoCapitalize="none" spellCheck={false}/></div></label>
+ <label><span>Password</span><div><KeyRound size={18}/><input required type="password" value={password} onChange={event=>setPassword(event.target.value)} autoComplete="current-password" placeholder="Enter your CampusConnect password"/></div></label>
+ <LoginCaptcha onToken={setCaptchaToken} attempt={captchaAttempt} theme={theme}/>
+ {error&&<p className="login-error" role="alert">{error}</p>}<button type="submit" className="primary-button full login-submit" disabled={busy||!captchaToken}>{busy?"Signing in…":"Login"}</button>
+ </form></div></div></section></main>;
 }
 
 function useHackathonFeed() {

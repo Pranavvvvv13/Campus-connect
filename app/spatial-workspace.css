@@ -381,3 +381,15 @@
 .theme-root.theme-light input::placeholder,.theme-root.theme-light textarea::placeholder { color:#000; opacity:1; -webkit-text-fill-color:#000; }
 .theme-root.theme-light .spatial-dashboard .welcome-panel { background:linear-gradient(112deg,#dcc9f3,#c3a2ed 58%,#dbaaff); }
 .theme-root.theme-light :is(.primary-button,.welcome-panel .primary-button,.rail-button.active,.filter-chip.active,.welcome-badge) { background:linear-gradient(135deg,#e9d6ff,#c5a7ec); }
+.theme-root .college-login { width:min(1200px,100%); }
+.college-login-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:40px; align-items:start; }
+.college-login-welcome h2 { font-size:22px; margin:0 0 24px; }
+.college-login-welcome p { font-size:16px; line-height:1.8; margin-bottom:18px; }
+.college-login-card { border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--surface); }
+.college-login-card h1 { margin:0; padding:20px; text-align:center; font-size:20px; background:var(--accent-soft); }
+.college-login-card .login-fields { padding:28px; }
+.college-login-card .login-fields label>span { font-size:15px; }
+.college-login-card .login-fields label>div { height:50px; border-radius:8px; }
+.college-login-card .login-fields input { font-size:16px; width:100%; min-width:0; }
+.college-login-card select { width:100%; padding:12px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); font:inherit; }
+@media(max-width:760px) { .college-login-grid { grid-template-columns:1fr; gap:24px; margin-top:28px; } .college-login-card .login-fields { padding:20px; } }

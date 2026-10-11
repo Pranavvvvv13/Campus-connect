@@ -1,4 +1,6 @@
 import { demoDirectory } from "@/lib/demo-accounts";
+import { demoLoginConfig } from "@/lib/demo-login";
+import { turnstileConfig, verifyTurnstile } from "@/lib/turnstile";
 import { api, ApiError, json, jsonBody, requireAccount, requireSameOrigin, sessionToken, tokenHash, workspaceDb } from "@/lib/workspace-server";
 export const dynamic = "force-dynamic";
 export async function GET(request: Request) { return api(async () => json({ account: await requireAccount(request) })); }
@@ -6,10 +8,17 @@ export async function POST(request: Request) {
   return api(async () => {
     requireSameOrigin(request);
     const url = new URL(request.url);
-    if (!import.meta.env.DEV || !["localhost", "127.0.0.1", "[::1]"].includes(url.hostname)) throw new ApiError(403, "Demo sign-in is available only in local development. Configure university authentication for deployment.");
     const body = await jsonBody(request);
-    const account = demoDirectory[String(body.universityId ?? "").trim().toUpperCase()];
-    if (!account || account.email.toLowerCase() !== String(body.email ?? "").trim().toLowerCase() || account.role !== body.role || body.code !== "246810") throw new ApiError(401, "The account details or verification code are incorrect.");
+    const local = import.meta.env.DEV && ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname);
+    const hostedDemo = await demoLoginConfig();
+    if (!local && !hostedDemo.enabled) throw new ApiError(403, "Teacher demo access needs to be enabled by the site owner.");
+    const captcha = await turnstileConfig(local);
+    if (!await verifyTurnstile(body.captchaToken, captcha.secret, url.hostname, captcha.testMode)) throw new ApiError(400, "CAPTCHA verification failed or expired. Please complete it again.");
+    const email = String(body.email ?? "").trim().toLowerCase();
+    const account = Object.values(demoDirectory).find(person => person.email.toLowerCase() === email);
+    const passwordLogin = typeof body.password === "string";
+    if (!local && (!passwordLogin || account?.universityId !== "STU-2026-001")) throw new ApiError(401, "Use the student demo account shared by the project owner.");
+    if (!account || account.role !== body.role || (passwordLogin ? body.password !== (local ? "123" : hostedDemo.password) : body.code !== "246810" || account.universityId !== String(body.universityId ?? "").trim().toUpperCase())) throw new ApiError(401, "The email or password is incorrect for this portal.");
     const db = await workspaceDb();
     const status=await db.prepare("SELECT suspended FROM workspace_account_status WHERE account_id=?").bind(account.universityId).first<{suspended:number}>();
     if(status?.suspended)throw new ApiError(403,"Your account is suspended. Contact the campus administrator.");
