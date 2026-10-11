@@ -20,7 +20,7 @@ export default function LoginCaptcha({ onToken, attempt, theme }: { onToken: (to
   useEffect(() => {
     let disposed = false; let widget: string | undefined;
     onToken("");
-    const clear = () => onToken("");
+    const clear = () => { if (!disposed) { onToken(""); setMessage("Verification expired. Please verify again."); } };
     void (async () => {
       const response = await fetch("/api/captcha", { cache: "no-store" });
       if (!response.ok) throw new Error("Could not load CAPTCHA configuration.");
@@ -29,7 +29,7 @@ export default function LoginCaptcha({ onToken, attempt, theme }: { onToken: (to
       await loadScript();
       if (disposed || !container.current || !window.turnstile) return;
       setMessage(config.testMode ? "Local CAPTCHA test mode · production keys required for bot protection" : "Complete the security verification.");
-      widget = window.turnstile.render(container.current, { sitekey: config.siteKey, action: "login", theme, size: "flexible", callback: (token: string) => { if (!disposed) onToken(token); }, "expired-callback": clear, "timeout-callback": clear, "error-callback": () => { clear(); setMessage("Verification failed. Please retry."); } });
+      widget = window.turnstile.render(container.current, { sitekey: config.siteKey, action: "login", theme, size: container.current.clientWidth < 300 ? "compact" : "flexible", callback: (token: string) => { if (!disposed) { onToken(token); setMessage(config.testMode ? "Verification complete · local test mode" : "Security verification complete."); } }, "expired-callback": clear, "timeout-callback": clear, "error-callback": () => { if (!disposed) { clear(); setMessage("Verification failed. Please retry."); } } });
     })().catch(error => { if (!disposed) setMessage(error instanceof Error ? error.message : "Verification unavailable."); });
     return () => { disposed = true; if (widget && window.turnstile) window.turnstile.remove(widget); };
   }, [onToken, attempt, theme, retry]);
